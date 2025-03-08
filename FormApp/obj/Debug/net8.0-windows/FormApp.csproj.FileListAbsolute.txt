@@ -1,0 +1,16 @@
+C:\Users\Gaming\Documents\HelloWorld\FormApp\bin\Debug\net8.0-windows\FormApp.exe
+C:\Users\Gaming\Documents\HelloWorld\FormApp\bin\Debug\net8.0-windows\FormApp.deps.json
+C:\Users\Gaming\Documents\HelloWorld\FormApp\bin\Debug\net8.0-windows\FormApp.runtimeconfig.json
+C:\Users\Gaming\Documents\HelloWorld\FormApp\bin\Debug\net8.0-windows\FormApp.dll
+C:\Users\Gaming\Documents\HelloWorld\FormApp\bin\Debug\net8.0-windows\FormApp.pdb
+C:\Users\Gaming\Documents\HelloWorld\FormApp\obj\Debug\net8.0-windows\FormApp.Form1.resources
+C:\Users\Gaming\Documents\HelloWorld\FormApp\obj\Debug\net8.0-windows\FormApp.csproj.GenerateResource.cache
+C:\Users\Gaming\Documents\HelloWorld\FormApp\obj\Debug\net8.0-windows\FormApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Gaming\Documents\HelloWorld\FormApp\obj\Debug\net8.0-windows\FormApp.AssemblyInfoInputs.cache
+C:\Users\Gaming\Documents\HelloWorld\FormApp\obj\Debug\net8.0-windows\FormApp.AssemblyInfo.cs
+C:\Users\Gaming\Documents\HelloWorld\FormApp\obj\Debug\net8.0-windows\FormApp.csproj.CoreCompileInputs.cache
+C:\Users\Gaming\Documents\HelloWorld\FormApp\obj\Debug\net8.0-windows\FormApp.dll
+C:\Users\Gaming\Documents\HelloWorld\FormApp\obj\Debug\net8.0-windows\refint\FormApp.dll
+C:\Users\Gaming\Documents\HelloWorld\FormApp\obj\Debug\net8.0-windows\FormApp.pdb
+C:\Users\Gaming\Documents\HelloWorld\FormApp\obj\Debug\net8.0-windows\FormApp.genruntimeconfig.cache
+C:\Users\Gaming\Documents\HelloWorld\FormApp\obj\Debug\net8.0-windows\ref\FormApp.dll

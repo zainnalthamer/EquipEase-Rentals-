@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "Welcome to Equipment Rental System";
+}
+
+<!-- Hero Section with Gradient Background -->
+<section class="text-center text-white py-5" style="background: linear-gradient(to right, #005A8D, #00C6FB);">
+    <div class="container">
+        <h1 class="display-4 mb-4 font-weight-bold">Welcome to Equipment Rental System</h1>
+        <p class="lead mb-4">Your One-Stop Solution for Renting Tools and Equipment</p>
+        <a href="/Inventory" class="btn btn-light btn-lg mx-2 mb-3 mb-md-0">Browse Equipment</a>
+        <a href="/RentalRequests" class="btn btn-outline-light btn-lg mx-2 mb-3 mb-md-0">View Rental Requests</a>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">What We Offer</h2>
+    <div class="row">
+        <!-- Manage Inventory Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-light">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Manage Inventory">
+                <div class="card-body">
+                    <h5 class="card-title">Manage Inventory</h5>
+                    <p class="card-text">Add, update, and delete rental equipment. Keep your inventory updated and available for customers.</p>
+                    <a href="/Inventory" class="btn btn-primary btn-lg">Manage Inventory</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Rental Requests Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-light">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Rental Requests">
+                <div class="card-body">
+                    <h5 class="card-title">Rental Requests</h5>
+                    <p class="card-text">Review and approve rental requests based on equipment availability. Manage rental timelines.</p>
+                    <a href="/RentalRequests" class="btn btn-primary btn-lg">View Requests</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Generate Reports Card -->
+        <div class="col-md-4 mb-4">
+            <div class="card shadow-lg border-light">
+                <img src="https://via.placeholder.com/350x200" class="card-img-top" alt="Reports">
+                <div class="card-body">
+                    <h5 class="card-title">Generate Reports</h5>
+                    <p class="card-text">Create reports to analyze rental history, inventory, and customer activity to make better decisions.</p>
+                    <a href="/Reports" class="btn btn-primary btn-lg">Generate Reports</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section with Carousel -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Customer Feedback</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-flex justify-content-center">
+                    <div class="card shadow-sm text-center" style="max-width: 600px;">
+                        <div class="card-body">
+                            <p class="card-text">"The rental process was smooth, and the equipment was in excellent condition. Highly recommend!"</p>
+                            <footer class="blockquote-footer">John Doe <cite title="Source Title">Customer</cite></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                    <div class="card shadow-sm text-center" style="max-width: 600px;">
+                        <div class="card-body">
+                            <p class="card-text">"Great service, everything was easy to find and rent. The return process was a breeze too!"</p>
+                            <footer class="blockquote-footer">Jane Smith <cite title="Source Title">Customer</cite></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-flex justify-content-center">
+                    <div class="card shadow-sm text-center" style="max-width: 600px;">
+                        <div class="card-body">
+                            <p class="card-text">"I rented a camera for my event, and it worked perfectly. The customer service was excellent!"</p>
+                            <footer class="blockquote-footer">Mark Lee <cite title="Source Title">Customer</cite></footer>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</section>
+
+<!-- Footer Section -->
+<section class="bg-dark text-white py-4">
+    <div class="container text-center">
+        <p class="mb-0">&copy; 2025 Equipment Rental System. All rights reserved.</p>
+        <p>Designed and Developed by Your Company</p>
+    </div>
+</section>
