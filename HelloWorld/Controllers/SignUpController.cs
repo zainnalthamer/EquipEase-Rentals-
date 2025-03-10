@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ClassLibrary.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Session;
+using System.Text;
+using Newtonsoft.Json;
 
 namespace HelloWorld.Controllers
 {
@@ -54,6 +57,16 @@ namespace HelloWorld.Controllers
             await _context.SaveChangesAsync();
 
             TempData["SuccessMessage"] = "Account successfully created! You can now sign in.";
+
+            var json = JsonConvert.SerializeObject(user);
+            var credBase64 = Convert.ToBase64String(Encoding.UTF8.GetBytes(json));
+
+            Response.Cookies.Append("credentials", credBase64, new CookieOptions
+            {
+                Secure = true,
+                HttpOnly = true,
+                Expires = DateTimeOffset.UtcNow.AddHours(24)
+            });
 
             return RedirectToAction("Index", "SignIn");
         }
