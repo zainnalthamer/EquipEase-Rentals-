@@ -1,5 +1,6 @@
 namespace FormApp
 {
+
     internal static class Program
     {
         /// <summary>

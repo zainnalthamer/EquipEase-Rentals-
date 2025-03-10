@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Gaming\\Documents\\HelloWorld\\ClassLibrary\\ClassLibrary.csproj": {}
+    "C:\\Users\\Gaming\\Desktop\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Gaming\\Documents\\HelloWorld\\ClassLibrary\\ClassLibrary.csproj": {
+    "C:\\Users\\Gaming\\Desktop\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Gaming\\Documents\\HelloWorld\\ClassLibrary\\ClassLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Gaming\\Desktop\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj",
         "projectName": "ClassLibrary",
-        "projectPath": "C:\\Users\\Gaming\\Documents\\HelloWorld\\ClassLibrary\\ClassLibrary.csproj",
+        "projectPath": "C:\\Users\\Gaming\\Desktop\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj",
         "packagesPath": "C:\\Users\\Gaming\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Gaming\\Documents\\HelloWorld\\ClassLibrary\\obj\\",
+        "outputPath": "C:\\Users\\Gaming\\Desktop\\AdvancedProject\\ClassLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -54,6 +54,12 @@
               "target": "Package",
               "version": "[8.0.13, )"
             },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.13, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.13, )"
@@ -63,6 +69,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[8.0.13, )"
+            },
+            "Microsoft.Graph": {
+              "target": "Package",
+              "version": "[5.72.0, )"
             }
           },
           "imports": [
