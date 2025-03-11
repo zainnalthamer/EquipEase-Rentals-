@@ -1,8 +1,11 @@
 ﻿@{
+
     ViewData["Title"] = "Create Account";
+
+    Layout = null;
 }
 
-<div class="container mx-auto flex justify-center items-start pt-12 min-h-screen">
+<div class="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 bg-gray-50">
     <div class="bg-white shadow-xl rounded-lg p-8 max-w-lg w-full">
         <h2 class="text-center text-3xl font-bold text-gray-900 mb-6">Create Account</h2>
 
@@ -20,16 +23,18 @@
             </div>
         }
 
-        <form method="post" action="/Signin/SignUp" class="space-y-4">
-            <div>
-                <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
-                <input type="text" id="firstName" name="firstName" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md" />
-            </div>
+        <form method="post" action="/SignUp/CreateAccount" class="space-y-4">
+             <div class="flex flex-row items-center justify-between">
+                    <div>
+                        <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
+                        <input type="text" id="firstName" name="firstName" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md" />
+                    </div>
 
-            <div>
-                <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
-                <input id="lastName" name="lastName" type="text" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" />
-            </div>
+                    <div>
+                        <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+                        <input id="lastName" name="lastName" type="text" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" />
+                    </div>
+             </div>
 
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
@@ -41,9 +46,15 @@
                 <input id="password" name="password" type="password" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" />
             </div>
 
+            <div>
+                <label for="confirmPassword" class="block text-sm font-medium text-gray-700">Confirm Password</label>
+                <input id="confirmPassword" name="confirmPassword" type="password" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" />
+            </div>
+
             <div class="text-center">
                 <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-md w-full">Create Account</button>
             </div>
+
         </form>
 
         <div class="text-center mt-4">
@@ -51,3 +62,5 @@
         </div>
     </div>
 </div>
+
+<script src="https://cdn.tailwindcss.com"></script> 

@@ -26,8 +26,7 @@ namespace HelloWorld.Controllers
             return Json(users);
         }
 
-        [HttpPost]
-        [HttpPost]
+
         [HttpPost]
         public async Task<IActionResult> CreateAccount(string firstName, string lastName, string email, string password, string confirmPassword)
         {
@@ -68,7 +67,7 @@ namespace HelloWorld.Controllers
                 Expires = DateTimeOffset.UtcNow.AddHours(24)
             });
 
-            return RedirectToAction("Index", "SignIn");
+            return Redirect("/Home");
         }
     }
 }
