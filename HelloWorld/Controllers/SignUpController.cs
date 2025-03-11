@@ -7,13 +7,13 @@ using Newtonsoft.Json;
 
 namespace HelloWorld.Controllers
 {
-    public class SignUpController : Controller
+    public class SignUpController : BaseController
     {
-        private readonly ClassLibrary.Persistence.DBContext _context;
+       
 
-        public SignUpController(ClassLibrary.Persistence.DBContext context)
+        public SignUpController(ClassLibrary.Persistence.DBContext context): base(context)
         {
-            _context = context;
+            
         }
 
         public IActionResult Index()

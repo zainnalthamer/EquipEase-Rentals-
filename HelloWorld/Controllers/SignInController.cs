@@ -6,12 +6,12 @@ using Newtonsoft.Json;
 
 namespace HelloWorld.Controllers
 {
-    public class SignInController : Controller
+    public class SignInController : BaseController
     {
-        private readonly ClassLibrary.Persistence.DBContext _context;
-        public SignInController(ClassLibrary.Persistence.DBContext context)
+        
+        public SignInController(ClassLibrary.Persistence.DBContext context): base(context)
         {
-            _context = context;
+           
         }
 
         [HttpPost]

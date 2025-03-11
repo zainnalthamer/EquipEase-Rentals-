@@ -7,11 +7,11 @@ using Newtonsoft.Json;
 
 namespace HelloWorld.Controllers
 {
-    public class HomeController : Controller
+    public class HomeController : BaseController
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger): base(null)
         {
             _logger = logger;
         }
@@ -28,16 +28,23 @@ namespace HelloWorld.Controllers
 
         public IActionResult Token()
         {
-            if (!Request.Cookies.TryGetValue("credentials", out string? userCookie) || userCookie == null)
+            if (!IsAuthenticated())
             {
                 return Redirect("/SignIn");
             }
 
-            var cookieValue = Encoding.UTF8.GetString(Convert.FromBase64String(userCookie));
-            var user = JsonConvert.DeserializeObject<User>(cookieValue);
-            return View(user);
-             
-            
+            try
+            {
+                User? user = GetUserObject();
+                if (user == null)
+                {
+                    throw new Exception("User does not exist");
+                }
+            } catch (Exception e)
+            {
+                ViewBag.Error = e.Message;
+            }
+            return View(ViewBag);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
