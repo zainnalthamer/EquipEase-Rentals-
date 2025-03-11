@@ -1,58 +1,53 @@
 ﻿@{
-    ViewData["Title"] = "Sign Up";
+    ViewData["Title"] = "Create Account";
 }
 
-<div class="container d-flex justify-content-center align-items-start" style="height: 100vh; padding-top: 50px;">
-    <div class="card p-5 shadow-sm" style="max-width: 500px; width: 100%;">
-        <h2 class="text-center mb-4">Create Account</h2>
+<div class="container mx-auto flex justify-center items-start pt-12 min-h-screen">
+    <div class="bg-white shadow-xl rounded-lg p-8 max-w-lg w-full">
+        <h2 class="text-center text-3xl font-bold text-gray-900 mb-6">Create Account</h2>
 
         @if (ViewBag.ErrorMessage != null)
         {
-            @if (ViewBag.ErrorMessage != null)
-            {
-                <div class="alert alert-danger">
-                    @ViewBag.ErrorMessage
-                </div>
-            }
-
-            @if (TempData["SuccessMessage"] != null)
-            {
-                <div class="alert alert-success">
-                    @TempData["SuccessMessage"]
-                </div>
-            }
-
+            <div class="bg-red-100 text-red-700 rounded-md p-4 mb-4">
+                @ViewBag.ErrorMessage
+            </div>
         }
 
-        <form method="post" action="/SignUp/CreateAccount">
-            <div class="form-group mb-3">
-                <label for="firstName">First Name</label>
-                <input type="text" class="form-control form-control-lg" id="firstName" name="firstName" required />
+        @if (ViewBag.Message != null)
+        {
+            <div class="bg-green-100 text-green-800 p-3 rounded mb-4">
+                @ViewBag.Message
             </div>
-            <div class="form-group mb-3">
-                <label for="lastName">Last Name</label>
-                <input type="text" class="form-control form-control-lg" id="lastName" name="lastName" required />
+        }
+
+        <form method="post" action="/Signin/SignUp" class="space-y-4">
+            <div>
+                <label for="firstName" class="block text-sm font-medium text-gray-700">First Name</label>
+                <input type="text" id="firstName" name="firstName" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md" />
             </div>
-            <div class="form-group mb-3">
-                <label for="email">Email</label>
-                <input type="email" class="form-control form-control-lg" id="email" name="email" required />
+
+            <div>
+                <label for="lastName" class="block text-sm font-medium text-gray-700">Last Name</label>
+                <input id="lastName" name="lastName" type="text" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" />
             </div>
-            <div class="form-group mb-3">
-                <label for="password">Password</label>
-                <input type="password" class="form-control form-control-lg" id="password" name="password" required />
+
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input id="email" name="email" type="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" />
             </div>
-            <div class="form-group mb-3">
-                <label for="confirmPassword">Confirm Password</label>
-                <input type="password" class="form-control form-control-lg" id="confirmPassword" name="confirmPassword" required />
+
+            <div>
+                <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+                <input id="password" name="password" type="password" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm" />
             </div>
-            <div class="text-center mb-3">
-                <button type="submit" class="btn btn-primary btn-lg">Create Account</button>
+
+            <div class="text-center">
+                <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-md w-full">Create Account</button>
             </div>
         </form>
 
-        <!-- Already have an account link -->
-        <div class="text-center">
-            <p>Already have an account? <a href="/SignIn" class="btn btn-link">Sign In</a></p>
+        <div class="text-center mt-4">
+            <p class="text-sm text-gray-600">Already have an account? <a href="/SignIn" class="text-orange-500 hover:underline">Sign In</a></p>
         </div>
     </div>
 </div>
