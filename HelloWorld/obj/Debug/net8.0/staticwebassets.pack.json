@@ -1,8 +1,8 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Hussa\\Desktop\\AdvancedProject\\HelloWorld\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\HelloWorld.bundle.scp.css",
-      "PackagePath": "staticwebassets\\HelloWorld.qe3skb165n.bundle.scp.css"
+      "Id": "C:\\Users\\Hussa\\Desktop\\AdvancedProject\\HelloWorld\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Rental.bundle.scp.css",
+      "PackagePath": "staticwebassets\\Rental.afg9dp1p0y.bundle.scp.css"
     },
     {
       "Id": "C:\\Users\\Hussa\\Desktop\\AdvancedProject\\HelloWorld\\wwwroot\\css\\Lumen.css",
@@ -257,24 +257,24 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HelloWorld.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Rental.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HelloWorld.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Rental.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.HelloWorld.props",
-      "PackagePath": "build\\HelloWorld.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Rental.props",
+      "PackagePath": "build\\Rental.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.HelloWorld.props",
-      "PackagePath": "buildMultiTargeting\\HelloWorld.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Rental.props",
+      "PackagePath": "buildMultiTargeting\\Rental.props"
     },
     {
-      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.HelloWorld.props",
-      "PackagePath": "buildTransitive\\HelloWorld.props"
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Rental.props",
+      "PackagePath": "buildTransitive\\Rental.props"
     }
   ],
   "ElementsToRemove": []

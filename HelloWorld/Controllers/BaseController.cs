@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
 
-namespace HelloWorld.Controllers
+namespace Rental.Controllers
 {
     public class BaseController : Controller
     {
@@ -18,11 +18,7 @@ namespace HelloWorld.Controllers
         public bool IsAuthenticated()
         {
             // try getting the credentials cookie, if it exists it will return true to inform the method that the user is authenticated, otherwise return false
-            if (!Request.Cookies.TryGetValue("credentials", out string? userCookie) || userCookie == null)
-            {
-                return false;
-            }
-            return true;
+            return Request.Cookies.TryGetValue("credentials", out string? userCookie) && !string.IsNullOrWhiteSpace(userCookie);
         }
 
         public User? GetUserObject()

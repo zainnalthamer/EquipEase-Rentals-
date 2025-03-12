@@ -1,4 +1,4 @@
-namespace HelloWorld.Models
+namespace Rental.Models
 {
     public class ErrorViewModel
     {

@@ -4,14 +4,14 @@ using ClassLibrary.Models;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace HelloWorld.Controllers
+namespace Rental.Controllers
 {
     public class SignInController : BaseController
     {
-        
-        public SignInController(ClassLibrary.Persistence.DBContext context): base(context)
+
+        public SignInController(ClassLibrary.Persistence.DBContext context) : base(context)
         {
-           
+
         }
 
         [HttpPost]

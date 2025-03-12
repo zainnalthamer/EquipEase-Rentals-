@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace HelloWorld.Models
+namespace Rental.Models
 {
     public class SessionToken
     {

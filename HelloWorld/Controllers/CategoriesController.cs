@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace HelloWorld.Controllers
+namespace Rental.Controllers
 {
     public class CategoriesController : BaseController
     {
@@ -11,6 +11,7 @@ namespace HelloWorld.Controllers
         }
         public IActionResult Index()
         {
+            if (!IsAuthenticated()) return Redirect("/SignIn");
             return View();
         }
 

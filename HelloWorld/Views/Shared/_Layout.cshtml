@@ -11,19 +11,50 @@
 <body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
     <header class="bg-white shadow-md">
         <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
-            <a class="text-2xl font-bold text-orange-500 hover:text-orange-600" asp-area="" asp-controller="Home" asp-action="Index">Equipment Rental</a>
-            <button class="sm:hidden text-gray-600 focus:outline-none" onclick="document.getElementById('nav-content').classList.toggle('hidden')">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="hidden sm:flex sm:items-center space-x-6" id="nav-content">
-                <a class="text-gray-600 hover:text-orange-500" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                <a class="text-gray-600 hover:text-orange-500" asp-area="" asp-controller="Inventory" asp-action="Index">Inventory</a>
-                <a class="text-gray-600 hover:text-orange-500" asp-area="" asp-controller="RentalRequests" asp-action="Index">Requests</a>
-                <a class="text-gray-600 hover:text-orange-500" asp-area="" asp-controller="Reports" asp-action="Index">Reports</a>
+            <!-- Logo -->
+            <a class="text-2xl font-bold text-orange-500 hover:text-orange-600" asp-area="" asp-controller="Home" asp-action="Index">
+                Equipment Rental
+            </a>
+
+            <!-- Navigation Links (Centered) -->
+            <div class="hidden sm:flex sm:items-center sm:justify-center flex-1 gap-6 content-center">
+                @if (ViewBag.IsAuthenticated == true)
+                {
+                    <a class="text-gray-600 hover:text-orange-500" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    <a class="text-gray-600 hover:text-orange-500" asp-area="" asp-controller="Inventory" asp-action="Index">Inventory</a>
+                    <a class="text-gray-600 hover:text-orange-500" asp-area="" asp-controller="RentalRequests" asp-action="Index">Requests</a>
+                    <a class="text-gray-600 hover:text-orange-500" asp-area="" asp-controller="Reports" asp-action="Index">Reports</a>
+                }
+            </div>
+
+            <!-- Profile Dropdown (Right) -->
+            @if (ViewBag.IsAuthenticated == true)
+            {
+                <div class="relative">
+                    <button class="flex items-center space-x-2 text-gray-600 hover:text-orange-500 focus:outline-none"
+                            onclick="document.getElementById('profile-dropdown').classList.toggle('hidden')">
+                        <i class="fas fa-user-circle text-xl"></i>
+                        <span>@User.Identity.Name</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+
+                    <!-- Dropdown Menu -->
+                    <div id="profile-dropdown" class="absolute right-0 mt-2 w-40 bg-white border rounded-lg shadow-lg hidden">
+                        <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" asp-area="" asp-controller="Profile" asp-action="Index">
+                            <i class="fas fa-user"></i> Profile
+                        </a>
+                        <a class="block px-4 py-2 text-gray-700 hover:bg-gray-100" asp-area="" asp-controller="Account" asp-action="Logout">
+                            <i class="fas fa-sign-out-alt"></i> Logout
+                        </a>
+                    </div>
+                </div>
+            }
+            else
+            {
                 <a class="text-gray-600 hover:text-orange-500" asp-area="" asp-controller="SignIn" asp-action="Index">
                     <i class="fas fa-user"></i> Sign In
                 </a>
-            </div>
+            }
         </nav>
     </header>
 

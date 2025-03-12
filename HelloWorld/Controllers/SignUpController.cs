@@ -5,15 +5,15 @@ using Microsoft.AspNetCore.Session;
 using System.Text;
 using Newtonsoft.Json;
 
-namespace HelloWorld.Controllers
+namespace Rental.Controllers
 {
     public class SignUpController : BaseController
     {
-       
 
-        public SignUpController(ClassLibrary.Persistence.DBContext context): base(context)
+
+        public SignUpController(ClassLibrary.Persistence.DBContext context) : base(context)
         {
-            
+
         }
 
         public IActionResult Index()
@@ -48,8 +48,8 @@ namespace HelloWorld.Controllers
                 Fname = firstName,
                 Lname = lastName,
                 Email = email,
-                Password = password, 
-                RoleId = 3 
+                Password = password,
+                RoleId = 3
             };
 
             _context.Users.Add(user);
