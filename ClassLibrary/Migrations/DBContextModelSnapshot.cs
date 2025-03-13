@@ -620,7 +620,7 @@ namespace ClassLibrary.Migrations
                         new
                         {
                             Id = 2,
-                            Role = "User"
+                            Role = "Manager"
                         },
                         new
                         {

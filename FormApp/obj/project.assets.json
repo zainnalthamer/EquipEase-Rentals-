@@ -2938,11 +2938,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gaming\\Desktop\\AdvancedProject\\FormApp\\FormApp.csproj",
+      "projectUniqueName": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\FormApp\\FormApp.csproj",
       "projectName": "FormApp",
-      "projectPath": "C:\\Users\\Gaming\\Desktop\\AdvancedProject\\FormApp\\FormApp.csproj",
+      "projectPath": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\FormApp\\FormApp.csproj",
       "packagesPath": "C:\\Users\\Gaming\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gaming\\Desktop\\AdvancedProject\\FormApp\\obj\\",
+      "outputPath": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\FormApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2963,8 +2963,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\Gaming\\Desktop\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj": {
-              "projectPath": "C:\\Users\\Gaming\\Desktop\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj"
+            "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj": {
+              "projectPath": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj"
             }
           }
         }

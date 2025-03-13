@@ -1,0 +1,393 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\controllers\\signupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\controllers\\signupcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\controllers\\signincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\controllers\\signincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\views\\signin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\views\\signin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\views\\signup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\views\\signup\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1101F6-8864-4A62-A408-380D21BAB54B}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\gaming\\documents\\advancedproject\\classlibrary\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1101F6-8864-4A62-A408-380D21BAB54B}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\models\\userrole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\gaming\\documents\\advancedproject\\helloworld\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1101F6-8864-4A62-A408-380D21BAB54B}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\gaming\\documents\\advancedproject\\classlibrary\\context\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1101F6-8864-4A62-A408-380D21BAB54B}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\context\\dbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1101F6-8864-4A62-A408-380D21BAB54B}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\gaming\\documents\\advancedproject\\classlibrary\\classlibrary.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{6F1101F6-8864-4A62-A408-380D21BAB54B}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\classlibrary.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1101F6-8864-4A62-A408-380D21BAB54B}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\gaming\\documents\\advancedproject\\classlibrary\\migrations\\20250311030055_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1101F6-8864-4A62-A408-380D21BAB54B}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\migrations\\20250311030055_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1101F6-8864-4A62-A408-380D21BAB54B}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\gaming\\documents\\advancedproject\\classlibrary\\migrations\\dbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1101F6-8864-4A62-A408-380D21BAB54B}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\migrations\\dbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1101F6-8864-4A62-A408-380D21BAB54B}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\gaming\\documents\\advancedproject\\classlibrary\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1101F6-8864-4A62-A408-380D21BAB54B}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F1101F6-8864-4A62-A408-380D21BAB54B}|ClassLibrary\\ClassLibrary.csproj|c:\\users\\gaming\\documents\\advancedproject\\classlibrary\\migrations\\20250313121639_test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F1101F6-8864-4A62-A408-380D21BAB54B}|ClassLibrary\\ClassLibrary.csproj|solutionrelative:classlibrary\\migrations\\20250313121639_test.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "HelloWorld\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "HelloWorld\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T14:09:09.868Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\Profile\\Index.cshtml",
+              "RelativeDocumentMoniker": "HelloWorld\\Views\\Profile\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\Profile\\Index.cshtml",
+              "RelativeToolTip": "HelloWorld\\Views\\Profile\\Index.cshtml",
+              "ViewState": "AgIAACIAAAAAAAAAAAAowEAAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T12:39:48.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SignInController.cs",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\SignInController.cs",
+              "RelativeDocumentMoniker": "HelloWorld\\Controllers\\SignInController.cs",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\SignInController.cs",
+              "RelativeToolTip": "HelloWorld\\Controllers\\SignInController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T12:47:51.015Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "HelloWorld\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "HelloWorld\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAC0AAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T13:03:39.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\SignUp\\Index.cshtml",
+              "RelativeDocumentMoniker": "HelloWorld\\Views\\SignUp\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\SignUp\\Index.cshtml",
+              "RelativeToolTip": "HelloWorld\\Views\\SignUp\\Index.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB0AAACcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T13:18:50.769Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "HelloWorld\\Controllers\\BaseController.cs",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "HelloWorld\\Controllers\\BaseController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABoAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T13:28:12.144Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "HelloWorld\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "HelloWorld\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAEAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T10:42:28.935Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "HelloWorld\\Controllers\\ProfileController.cs",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "HelloWorld\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAgwBEAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T12:47:40.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "HelloWorld\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "HelloWorld\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T12:49:45.768Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SignUpController.cs",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\SignUpController.cs",
+              "RelativeDocumentMoniker": "HelloWorld\\Controllers\\SignUpController.cs",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\SignUpController.cs",
+              "RelativeToolTip": "HelloWorld\\Controllers\\SignUpController.cs",
+              "ViewState": "AgIAADQAAAAAAAAAAAAkwEUAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T13:25:43.132Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "HelloWorld\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "HelloWorld\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T12:40:52.156Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "HelloWorld\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "HelloWorld\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T14:06:43.467Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "HelloWorld\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "HelloWorld\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T10:42:52.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "DBContext.cs",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\Context\\DBContext.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\Context\\DBContext.cs",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\Context\\DBContext.cs",
+              "RelativeToolTip": "ClassLibrary\\Context\\DBContext.cs",
+              "ViewState": "AgIAADIAAAAAAAAAAAAjwD4AAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T10:49:38.927Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UserRole.cs",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\Models\\UserRole.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\Models\\UserRole.cs",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\Models\\UserRole.cs",
+              "RelativeToolTip": "ClassLibrary\\Models\\UserRole.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T11:00:24.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\SignIn\\Index.cshtml",
+              "RelativeDocumentMoniker": "HelloWorld\\Views\\SignIn\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Views\\SignIn\\Index.cshtml",
+              "RelativeToolTip": "HelloWorld\\Views\\SignIn\\Index.cshtml",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAQwBcAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-13T11:06:35.214Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\Models\\User.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\Models\\User.cs",
+              "RelativeToolTip": "ClassLibrary\\Models\\User.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T11:18:59.661Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Program.cs",
+              "RelativeDocumentMoniker": "HelloWorld\\Program.cs",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\Program.cs",
+              "RelativeToolTip": "HelloWorld\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T11:35:42.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DBContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\Migrations\\DBContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\Migrations\\DBContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\Migrations\\DBContextModelSnapshot.cs",
+              "RelativeToolTip": "ClassLibrary\\Migrations\\DBContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T11:33:23.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\appsettings.json",
+              "RelativeDocumentMoniker": "HelloWorld\\appsettings.json",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\HelloWorld\\appsettings.json",
+              "RelativeToolTip": "HelloWorld\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-13T11:36:01.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ClassLibrary.csproj",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj",
+              "RelativeDocumentMoniker": "ClassLibrary\\ClassLibrary.csproj",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj",
+              "RelativeToolTip": "ClassLibrary\\ClassLibrary.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-13T12:16:13.388Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "20250313121639_test.cs",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\Migrations\\20250313121639_test.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\Migrations\\20250313121639_test.cs",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\Migrations\\20250313121639_test.cs",
+              "RelativeToolTip": "ClassLibrary\\Migrations\\20250313121639_test.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T12:16:40.011Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20250311030055_InitialMigration.cs",
+              "DocumentMoniker": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\Migrations\\20250311030055_InitialMigration.cs",
+              "RelativeDocumentMoniker": "ClassLibrary\\Migrations\\20250311030055_InitialMigration.cs",
+              "ToolTip": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\Migrations\\20250311030055_InitialMigration.cs",
+              "RelativeToolTip": "ClassLibrary\\Migrations\\20250311030055_InitialMigration.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-13T10:49:40.637Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

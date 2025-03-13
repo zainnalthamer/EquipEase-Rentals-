@@ -8,6 +8,7 @@ namespace Rental.Controllers
 {
     public class SignInController : BaseController
     {
+        public string users;
 
         public SignInController(ClassLibrary.Persistence.DBContext context) : base(context)
         {
@@ -34,6 +35,7 @@ namespace Rental.Controllers
                 });
 
                 ViewBag.Message = "User logged Successfully";
+                users=user.Id.ToString();
 
             }
             catch (Exception ex)

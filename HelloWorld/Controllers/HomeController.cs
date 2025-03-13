@@ -1,9 +1,10 @@
 using System.Diagnostics;
 using System.Text;
 using ClassLibrary.Models;
-using HelloWorld.Models;
+using Rental.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
+using Rental.Models;
 
 namespace Rental.Controllers
 {
