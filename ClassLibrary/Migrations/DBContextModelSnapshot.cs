@@ -40,6 +40,23 @@ namespace ClassLibrary.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Available_Status");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Status = "Available"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Status = "Unavailable"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Status = "Under Maintenance"
+                        });
                 });
 
             modelBuilder.Entity("ClassLibrary.Models.Category", b =>
@@ -60,6 +77,28 @@ namespace ClassLibrary.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Category");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Power Tools"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Cameras"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Name = "Construction"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Name = "Event Supplies"
+                        });
                 });
 
             modelBuilder.Entity("ClassLibrary.Models.ConditionStatus", b =>
@@ -80,6 +119,28 @@ namespace ClassLibrary.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Condition_Status");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Status = "New"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Status = "Good"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Status = "Damaged"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Status = "Refurbished"
+                        });
                 });
 
             modelBuilder.Entity("ClassLibrary.Models.Document", b =>
@@ -173,6 +234,10 @@ namespace ClassLibrary.Migrations
                         .HasMaxLength(50)
                         .IsUnicode(false)
                         .HasColumnType("varchar(50)");
+
+                    b.Property<byte[]>("Image")
+                        .IsRequired()
+                        .HasColumnType("varbinary(max)");
 
                     b.Property<string>("Name")
                         .IsRequired()

@@ -70,6 +70,25 @@ public partial class DBContext : DbContext
             new UserRole { Id = 2, Role = "Manager" },
             new UserRole { Id = 3, Role = "Customer" }
         );
+        modelBuilder.Entity<ConditionStatus>().HasData(
+             new ConditionStatus { Id = 1, Status = "New" },
+             new ConditionStatus { Id = 2, Status = "Good" },
+            new ConditionStatus { Id = 3, Status = "Damaged" },
+             new ConditionStatus { Id = 4, Status = "Refurbished" }
+        );
+        modelBuilder.Entity<AvailableStatus>().HasData(
+            new AvailableStatus { Id = 1, Status = "Available" },
+            new AvailableStatus { Id = 2, Status = "Unavailable" },
+            new AvailableStatus { Id = 3, Status = "Under Maintenance" }
+        );
+        modelBuilder.Entity<Category>().HasData(
+         new Category { Id = 1, Name = "Power Tools" },
+         new Category { Id = 2, Name = "Cameras" },
+         new Category { Id = 3, Name = "Construction" },
+         new Category { Id = 4, Name = "Event Supplies" }
+        );
+
+
         modelBuilder.Entity<Document>(entity =>
         {
             entity.HasOne(d => d.DocumentTypeNavigation).WithMany(p => p.Documents)

@@ -52,4 +52,7 @@ public partial class Equipment
 
     [InverseProperty("EquipmentNavigation")]
     public virtual ICollection<ReturnRecord> ReturnRecords { get; set; } = new List<ReturnRecord>();
+
+    public byte[] Image { get; set; } = null!;
+
 }

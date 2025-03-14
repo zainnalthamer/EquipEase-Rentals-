@@ -2932,23 +2932,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Gaming\\.nuget\\packages\\": {},
+    "C:\\Users\\Dell\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\FormApp\\FormApp.csproj",
+      "projectUniqueName": "C:\\Users\\Dell\\Desktop\\AdvancedProject\\FormApp\\FormApp.csproj",
       "projectName": "FormApp",
-      "projectPath": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\FormApp\\FormApp.csproj",
-      "packagesPath": "C:\\Users\\Gaming\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\FormApp\\obj\\",
+      "projectPath": "C:\\Users\\Dell\\Desktop\\AdvancedProject\\FormApp\\FormApp.csproj",
+      "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Dell\\Desktop\\AdvancedProject\\FormApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Gaming\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2963,8 +2963,8 @@
         "net8.0-windows7.0": {
           "targetAlias": "net8.0-windows",
           "projectReferences": {
-            "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj": {
-              "projectPath": "C:\\Users\\Gaming\\Documents\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj"
+            "C:\\Users\\Dell\\Desktop\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj": {
+              "projectPath": "C:\\Users\\Dell\\Desktop\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj"
             }
           }
         }
@@ -2977,9 +2977,9 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "direct"
+        "auditMode": "all"
       },
-      "SdkAnalysisLevel": "9.0.100"
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net8.0-windows7.0": {
@@ -3003,7 +3003,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.24575.35/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
