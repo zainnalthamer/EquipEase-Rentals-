@@ -185,7 +185,7 @@
               "RelativeDocumentMoniker": "HelloWorld\\Views\\Equipment\\Index.cshtml",
               "ToolTip": "C:\\Users\\Dell\\Desktop\\AdvancedProject\\HelloWorld\\Views\\Equipment\\Index.cshtml",
               "RelativeToolTip": "HelloWorld\\Views\\Equipment\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAG0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAmwHEAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-14T14:17:03.864Z",
               "EditorCaption": ""
@@ -200,8 +200,7 @@
               "RelativeToolTip": "HelloWorld\\Controllers\\EquipmentController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T14:13:37.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T14:13:37.167Z"
             },
             {
               "$type": "Document",
@@ -261,8 +260,7 @@
               "RelativeToolTip": "HelloWorld\\Controllers\\SignInController.cs",
               "ViewState": "AgIAAAsAAAAAAAAAAAAAwDAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T12:47:51.015Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T12:47:51.015Z"
             },
             {
               "$type": "Document",
@@ -298,8 +296,7 @@
               "RelativeToolTip": "HelloWorld\\Controllers\\BaseController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T13:28:12.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T13:28:12.144Z"
             },
             {
               "$type": "Document",
@@ -323,8 +320,7 @@
               "RelativeToolTip": "HelloWorld\\Controllers\\ProfileController.cs",
               "ViewState": "AgIAAEcAAAAAAAAAAAAgwBEAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-13T12:47:40.775Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-13T12:47:40.775Z"
             },
             {
               "$type": "Document",

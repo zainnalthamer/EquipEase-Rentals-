@@ -12,6 +12,7 @@
 <section class="container mx-auto py-12 px-6">
     <div class="flex flex-col md:flex-row justify-between items-center bg-gray-100 p-6 rounded-lg shadow-lg">
         <input type="text" id="search" placeholder="Search equipment..." class="border border-gray-300 rounded-lg px-4 py-2 w-full md:w-1/3 mb-4 md:mb-0">
+        <button onclick="searchCategory" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">Search</button>
         <select id="categoryFilter" class="border border-gray-300 rounded-lg px-4 py-2 w-full md:w-1/4 mb-4 md:mb-0" onchange="filterEquipment()">
             <option value="">All Categories</option>
             @foreach (var category in ViewBag.Categories)
@@ -99,6 +100,22 @@
 </footer>
 
 <script>
+    document.getElementById("search").addEventListener("input", searchEquipment);
+
+    function searchEquipment() {
+        var input = document.getElementById("search").value.toLowerCase();
+        var equipmentItems = document.querySelectorAll("#equipmentList > div");
+
+        equipmentItems.forEach(function (item) {
+            var equipmentName = item.querySelector("h3").innerText.toLowerCase(); 
+            if (equipmentName.includes(input)) {
+                item.style.display = "block"; 
+            } else {
+                item.style.display = "none"; 
+            }
+        });
+    }
+
     function filterEquipment() {
         var categoryId = document.getElementById("categoryFilter").value;
 
@@ -109,7 +126,8 @@
         }
     }
 
-    // Trigger filtering when the user changes the category
     document.getElementById("categoryFilter").addEventListener("change", filterEquipment);
 </script>
+
+
 
