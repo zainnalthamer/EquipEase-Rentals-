@@ -8,6 +8,7 @@
         <p class="text-xl text-gray-200 mb-6">Find the right tools for your next project.</p>
     </div>
 </section>
+
 <section class="container mx-auto py-12 px-6">
     <div class="flex flex-col md:flex-row justify-between items-center bg-gray-100 p-6 rounded-lg shadow-lg">
         <input type="text" id="search" placeholder="Search equipment..." class="border border-gray-300 rounded-lg px-4 py-2 w-full md:w-1/3 mb-4 md:mb-0">
@@ -43,7 +44,7 @@
                 <option value="">Select Availability</option>
                 @foreach (var status in ViewBag.AvailabilityStatuses)
                 {
-                    <option value="@status.Id">@status.Status</option> 
+                    <option value="@status.Id">@status.Status</option>
                 }
             </select>
 
@@ -51,7 +52,7 @@
                 <option value="">Select Condition</option>
                 @foreach (var condition in ViewBag.ConditionStatuses)
                 {
-                    <option value="@condition.Id">@condition.Status</option> 
+                    <option value="@condition.Id">@condition.Status</option>
                 }
             </select>
 

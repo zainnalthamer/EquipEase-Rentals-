@@ -18,9 +18,11 @@ namespace Rental.Controllers
         {
             if (!IsAuthenticated())
             {
+                ViewBag.IsAuthenticated = false;
                 return Redirect("/SignIn");
             }
 
+            ViewBag.IsAuthenticated = true; 
             try
             {
                 var equipmentList = await _context.Equipment
@@ -39,9 +41,9 @@ namespace Rental.Controllers
                     .ToListAsync();
 
                 ViewBag.EquipmentList = equipmentList;
-                ViewBag.Categories = await _context.Categories.ToListAsync(); 
-                ViewBag.ConditionStatuses = await _context.ConditionStatuses.ToListAsync(); 
-                ViewBag.AvailabilityStatuses = await _context.AvailableStatuses.ToListAsync(); 
+                ViewBag.Categories = await _context.Categories.ToListAsync();
+                ViewBag.ConditionStatuses = await _context.ConditionStatuses.ToListAsync();
+                ViewBag.AvailabilityStatuses = await _context.AvailableStatuses.ToListAsync();
             }
             catch (Exception e)
             {
