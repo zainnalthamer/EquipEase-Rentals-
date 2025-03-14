@@ -14,7 +14,7 @@ namespace Rental.Controllers
         {
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? categoryId)
         {
             if (!IsAuthenticated())
             {
@@ -22,10 +22,17 @@ namespace Rental.Controllers
                 return Redirect("/SignIn");
             }
 
-            ViewBag.IsAuthenticated = true; 
+            ViewBag.IsAuthenticated = true;
             try
             {
-                var equipmentList = await _context.Equipment
+                var equipmentQuery = _context.Equipment.AsQueryable();
+
+                if (categoryId.HasValue && categoryId.Value > 0)
+                {
+                    equipmentQuery = equipmentQuery.Where(e => e.CategoryId == categoryId.Value);
+                }
+
+                var equipmentList = await equipmentQuery
                     .Select(e => new
                     {
                         e.Id,
