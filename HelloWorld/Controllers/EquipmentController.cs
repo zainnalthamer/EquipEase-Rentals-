@@ -48,9 +48,24 @@ namespace Rental.Controllers
                     .ToListAsync();
 
                 ViewBag.EquipmentList = equipmentList;
+                //ViewBag.User=await _context.Users.User
+                //var userEmail = User.Identity.Name; // This retrieves the email of the logged-in user
+                //ViewBag.User = await _context.Users.Include(u => u.Role).FirstOrDefaultAsync(u => u.Email == userEmail);
                 ViewBag.Categories = await _context.Categories.ToListAsync();
                 ViewBag.ConditionStatuses = await _context.ConditionStatuses.ToListAsync();
                 ViewBag.AvailabilityStatuses = await _context.AvailableStatuses.ToListAsync();
+                //var userEmail = User.Identity.Name;
+
+                var user = GetUserObject();
+                if (user != null)
+                {
+                    ViewBag.User = user;
+                }
+                else
+                {
+                    ViewBag.User = null;
+                }
+
             }
             catch (Exception e)
             {

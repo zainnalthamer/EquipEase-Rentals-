@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\HelloWorld",
+    "\\HelloWorld\\Views",
+    "\\HelloWorld\\Views\\Equipment"
   ],
-  "SelectedNode": "\\HelloWorld.sln",
+  "SelectedNode": "\\HelloWorld\\Views\\Equipment\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
