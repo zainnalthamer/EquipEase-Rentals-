@@ -126,6 +126,8 @@ namespace Rental.Controllers
                     .Include(e => e.Category)
                     .Include(e => e.Available)
                     .Include(e => e.Condition)
+                    .Include(e => e.FeedBacks) // Include feedbacks
+                    .ThenInclude(f => f.User)  // Include users who left feedback
                     .FirstOrDefaultAsync(e => e.Id == id);
 
                 if (equipment == null)
@@ -133,15 +135,10 @@ namespace Rental.Controllers
                     return NotFound();
                 }
 
+                ViewBag.FeedbackList = equipment.FeedBacks.ToList(); // Pass feedback to the view
+
                 var user = GetUserObject();
-                if (user != null)
-                {
-                    ViewBag.User = user;
-                }
-                else
-                {
-                    ViewBag.User = null;
-                }
+                ViewBag.User = user ?? null;
 
                 return View(equipment);
             }
@@ -151,5 +148,6 @@ namespace Rental.Controllers
                 return View("Error");
             }
         }
+
     }
 }

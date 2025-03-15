@@ -19,6 +19,58 @@
                 <p><strong>Status:</strong> @Model.Available.Status</p>
             </div>
         </div>
+        <section class="mt-8 bg-gray-100 p-6 rounded-lg shadow-lg">
+            <h2 class="text-2xl font-bold mb-4">Leave Feedback</h2>
+
+            <form asp-controller="FeedBack" asp-action="Create" method="post" class="space-y-4">
+                <input type="hidden" name="Equipment" value="@Model.Id" />
+
+                <div>
+                    <label for="Notes" class="block font-semibold">Notes</label>
+                    <input type="text" name="Notes" id="Notes" class="border border-gray-300 rounded-lg px-4 py-2 w-full" required>
+                </div>
+
+                <div>
+                    <label for="Comment" class="block font-semibold">Comment</label>
+                    <textarea name="Comment" id="Comment" class="border border-gray-300 rounded-lg px-4 py-2 w-full h-24" required></textarea>
+                </div>
+
+                <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">Submit Feedback</button>
+            </form>
+            @if (TempData["ErrorMessage"] != null)
+            {
+                <p class="text-red-500">@TempData["ErrorMessage"]</p>
+            }
+
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <p class="text-green-500">@TempData["SuccessMessage"]</p>
+            }
+        </section>
+        <section class="mt-8">
+            <h2 class="text-2xl font-bold mb-4">Feedback</h2>
+
+            @if (ViewBag.FeedbackList != null && ViewBag.FeedbackList.Count > 0)
+            {
+                <div class="space-y-4">
+                    @foreach (var feedback in ViewBag.FeedbackList)
+                    {
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <p class="font-semibold">@feedback.User.Fname @feedback.User.Lname</p>
+                            <p class="text-gray-600">@feedback.Date.ToString("yyyy-MM-dd") at @feedback.Time</p>
+                            <p class="mt-2"><strong>Notes:</strong> @feedback.Notes</p>
+                            <p><strong>Comment:</strong> @feedback.Comment</p>
+                        </div>
+                    }
+                </div>
+            }
+            else
+            {
+                <p class="text-gray-500">No feedback available for this equipment yet.</p>
+            }
+        </section>
+
+
         <div class="mt-6">
             <a href="/RentalRequests/Create?equipmentId=@Model.Id" class="block bg-orange-500 hover:bg-orange-600 text-white text-center py-2 rounded-lg">Request Rental</a>
         </div>
