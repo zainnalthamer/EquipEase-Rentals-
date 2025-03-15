@@ -110,5 +110,46 @@ namespace Rental.Controllers
 
             return RedirectToAction("Index");
         }
+        public async Task<IActionResult> Details(int id)
+        {
+            if (!IsAuthenticated())
+            {
+                ViewBag.IsAuthenticated = false;
+                return Redirect("/SignIn");
+            }
+
+            ViewBag.IsAuthenticated = true;
+
+            try
+            {
+                var equipment = await _context.Equipment
+                    .Include(e => e.Category)
+                    .Include(e => e.Available)
+                    .Include(e => e.Condition)
+                    .FirstOrDefaultAsync(e => e.Id == id);
+
+                if (equipment == null)
+                {
+                    return NotFound();
+                }
+
+                var user = GetUserObject();
+                if (user != null)
+                {
+                    ViewBag.User = user;
+                }
+                else
+                {
+                    ViewBag.User = null;
+                }
+
+                return View(equipment);
+            }
+            catch (Exception e)
+            {
+                ViewBag.ErrorMessage = e.Message;
+                return View("Error");
+            }
+        }
     }
 }

@@ -106,7 +106,7 @@
                         @(item.AvailableId == 1 ? "Available" : "Unavailable")
                     </span>
                 </p>
-                <a href="/RentalRequests/Create?equipmentId=@item.Id" class="mt-4 block bg-orange-500 hover:bg-orange-600 text-white text-center py-2 rounded-lg">Rent Now</a>
+                <a href="@Url.Action("Details", "Equipment", new { id = item.Id })" class="mt-4 block bg-orange-500 hover:bg-orange-600 text-white text-center py-2 rounded-lg">Details</a>
             </div>
         }
     </div>
