@@ -16,7 +16,7 @@ public partial class Equipment
     [Unicode(false)]
     public string Name { get; set; } = null!;
 
-    [StringLength(50)]
+    [StringLength(300)]
     [Unicode(false)]
     public string Description { get; set; } = null!;
 

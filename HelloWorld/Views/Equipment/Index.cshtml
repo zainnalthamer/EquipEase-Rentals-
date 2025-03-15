@@ -42,44 +42,46 @@
 @if (ViewBag.User != null && ViewBag.User.RoleId != 3)
 
 {
-<section class="container mx-auto py-12 px-6">
-    <h2 class="text-3xl font-bold mb-4">Add New Equipment</h2>
-    <form asp-controller="Equipment" asp-action="AddEquipment" method="post" enctype="multipart/form-data" class="bg-gray-100 p-6 rounded-lg shadow-lg">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <input type="text" name="name" placeholder="Equipment Name" class="border border-gray-300 rounded-lg px-4 py-2" required>
-            <input type="text" name="description" placeholder="Description" class="border border-gray-300 rounded-lg px-4 py-2" required>
+    <section class="container mx-auto py-12 px-6">
+        <h2 class="text-3xl font-bold mb-4">Add New Equipment</h2>
+        <form asp-controller="Equipment" asp-action="AddEquipment" method="post" enctype="multipart/form-data" class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <input type="text" name="name" placeholder="Equipment Name" class="border border-gray-300 rounded-lg px-4 py-2" required>
 
-            <select name="categoryId" class="border border-gray-300 rounded-lg px-4 py-2" required>
-                <option value="">Select Category</option>
-                @foreach (var category in ViewBag.Categories)
-                {
-                    <option value="@category.Id">@category.Name</option>
-                }
-            </select>
+                <textarea name="description" placeholder="Description" class="border border-gray-300 rounded-lg px-4 py-2 h-32" required></textarea>
 
-            <input type="number" name="price" placeholder="Price" step="0.01" class="border border-gray-300 rounded-lg px-4 py-2" required>
+                <select name="categoryId" class="border border-gray-300 rounded-lg px-4 py-2" required>
+                    <option value="">Select Category</option>
+                    @foreach (var category in ViewBag.Categories)
+                    {
+                        <option value="@category.Id">@category.Name</option>
+                    }
+                </select>
 
-            <select name="availableId" class="border border-gray-300 rounded-lg px-4 py-2" required>
-                <option value="">Select Availability</option>
-                @foreach (var status in ViewBag.AvailabilityStatuses)
-                {
-                    <option value="@status.Id">@status.Status</option>
-                }
-            </select>
+                <input type="number" name="price" placeholder="Price" step="0.01" class="border border-gray-300 rounded-lg px-4 py-2" required>
 
-            <select name="conditionId" class="border border-gray-300 rounded-lg px-4 py-2" required>
-                <option value="">Select Condition</option>
-                @foreach (var condition in ViewBag.ConditionStatuses)
-                {
-                    <option value="@condition.Id">@condition.Status</option>
-                }
-            </select>
+                <select name="availableId" class="border border-gray-300 rounded-lg px-4 py-2" required>
+                    <option value="">Select Availability</option>
+                    @foreach (var status in ViewBag.AvailabilityStatuses)
+                    {
+                        <option value="@status.Id">@status.Status</option>
+                    }
+                </select>
 
-            <input type="file" name="image" accept="image/*" class="border border-gray-300 rounded-lg px-4 py-2">
-        </div>
-        <button type="submit" class="mt-4 bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">Add Equipment</button>
-    </form>
-</section>
+                <select name="conditionId" class="border border-gray-300 rounded-lg px-4 py-2" required>
+                    <option value="">Select Condition</option>
+                    @foreach (var condition in ViewBag.ConditionStatuses)
+                    {
+                        <option value="@condition.Id">@condition.Status</option>
+                    }
+                </select>
+
+                <input type="file" name="image" accept="image/*" class="border border-gray-300 rounded-lg px-4 py-2">
+            </div>
+            <button type="submit" class="mt-4 bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">Add Equipment</button>
+        </form>
+    </section>
+
 }
 
 <section class="container mx-auto py-8 px-6">

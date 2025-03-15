@@ -231,9 +231,9 @@ namespace ClassLibrary.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasMaxLength(50)
+                        .HasMaxLength(300)
                         .IsUnicode(false)
-                        .HasColumnType("varchar(50)");
+                        .HasColumnType("varchar(300)");
 
                     b.Property<byte[]>("Image")
                         .IsRequired()
