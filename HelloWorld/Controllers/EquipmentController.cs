@@ -110,6 +110,52 @@ namespace Rental.Controllers
 
             return RedirectToAction("Index");
         }
+        [HttpPost]
+        public async Task<IActionResult> Delete(int id)
+        {
+            if (!IsAuthenticated())
+            {
+                return Redirect("/SignIn");
+            }
+
+            var equipment = await _context.Equipment.FindAsync(id);
+            if (equipment == null)
+            {
+                return NotFound();
+            }
+
+            _context.Equipment.Remove(equipment);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
+        [HttpPost]
+        public IActionResult EditEquipment(Equipment model, IFormFile image)
+        {
+            var equipment = _context.Equipment.Find(model.Id);
+            if (equipment == null) return NotFound();
+
+            equipment.Name = model.Name;
+            equipment.Description = model.Description;
+            equipment.CategoryId = model.CategoryId;
+            equipment.Price = model.Price;
+            equipment.AvailableId = model.AvailableId;
+            equipment.ConditionId = model.ConditionId;
+
+            if (image != null)
+            {
+                using (var ms = new MemoryStream())
+                {
+                    image.CopyTo(ms);
+                    equipment.Image = ms.ToArray();
+                }
+            }
+
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
         public async Task<IActionResult> Details(int id)
         {
             if (!IsAuthenticated())

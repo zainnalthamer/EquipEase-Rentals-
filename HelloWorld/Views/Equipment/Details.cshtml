@@ -7,9 +7,16 @@
 <section class="container mx-auto py-12 px-6">
     <div class="bg-white rounded-lg shadow-lg p-6">
         <h1 class="text-3xl font-bold mb-4">@Model.Name</h1>
+
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <p class="text-green-500">@TempData["SuccessMessage"]</p>
+        }
+
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div>
-                <img src="data:image/png;base64,@Convert.ToBase64String(Model.Image)" alt="@Model.Name" class="w-full h-64 object-cover rounded-md">
+                <img src="data:image/png;base64,@Convert.ToBase64String(Model.Image)"
+                alt="@Model.Name" class="w-full h-64 object-cover rounded-md">
             </div>
             <div>
                 <p class="break-words"><strong>Description:</strong> @Model.Description</p>
@@ -19,6 +26,7 @@
                 <p><strong>Status:</strong> @Model.Available.Status</p>
             </div>
         </div>
+
         <section class="mt-8 bg-gray-100 p-6 rounded-lg shadow-lg">
             <h2 class="text-2xl font-bold mb-4">Leave Feedback</h2>
 
@@ -37,16 +45,17 @@
 
                 <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">Submit Feedback</button>
             </form>
+
             @if (TempData["ErrorMessage"] != null)
             {
                 <p class="text-red-500">@TempData["ErrorMessage"]</p>
             }
-
             @if (TempData["SuccessMessage"] != null)
             {
                 <p class="text-green-500">@TempData["SuccessMessage"]</p>
             }
         </section>
+
         <section class="mt-8">
             <h2 class="text-2xl font-bold mb-4">Feedback</h2>
 
@@ -70,14 +79,24 @@
             }
         </section>
 
-
-        <div class="mt-6">
-            <a href="/RentalRequests/Create?equipmentId=@Model.Id" class="block bg-orange-500 hover:bg-orange-600 text-white text-center py-2 rounded-lg">Request Rental</a>
+        <!-- Rental Request Form -->
+        @if (Model.Available.Id == 1)
+        {
+            <div class="mt-6">
+                <form asp-controller="RentalRequest" asp-action="Create" method="post">
+                <input type="hidden" name="equipmentId" value="@Model.Id" />
+                <button type="submit" class="block bg-orange-500 hover:bg-orange-600 text-white text-center py-2 rounded-lg w-full">
+                    Request Rental
+                </button>
+            </form>
         </div>
+        }
 
         <!-- Back Button -->
         <div class="mt-4">
-            <a href="@Url.Action("Index", "Equipment")" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg inline-block">Back to Equipment List</a>
+            <a href="@Url.Action("Index", "Equipment")" class="bg-gray-500 hover:bg-gray-600 text-white px-6 py-2 rounded-lg inline-block">
+                Back to Equipment List
+            </a>
         </div>
     </div>
 </section>

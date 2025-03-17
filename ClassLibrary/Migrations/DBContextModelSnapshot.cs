@@ -535,6 +535,48 @@ namespace ClassLibrary.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Rental_Status");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Status = "Pending"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Status = "Approved"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Status = "Rejected"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Status = "Cancelled"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Status = "Active"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            Status = "Returned"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            Status = "Overdue"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            Status = "Completed"
+                        });
                 });
 
             modelBuilder.Entity("ClassLibrary.Models.RentalTransaction", b =>

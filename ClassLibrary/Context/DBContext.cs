@@ -87,6 +87,16 @@ public partial class DBContext : DbContext
          new Category { Id = 3, Name = "Construction" },
          new Category { Id = 4, Name = "Event Supplies" }
         );
+        modelBuilder.Entity<RentalStatus>().HasData(
+            new RentalStatus { Id=1,Status="Pending"},
+            new RentalStatus { Id=2,Status= "Approved" },
+            new RentalStatus { Id=3,Status= "Rejected" },
+            new RentalStatus { Id=4,Status= "Cancelled" },
+            new RentalStatus { Id=5,Status= "Active" },
+            new RentalStatus { Id=6,Status= "Returned" },
+            new RentalStatus { Id=7,Status= "Overdue" },
+            new RentalStatus { Id=8,Status= "Completed" }
+            );
 
 
         modelBuilder.Entity<Document>(entity =>
