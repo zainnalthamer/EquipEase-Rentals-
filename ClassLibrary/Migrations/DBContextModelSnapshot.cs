@@ -508,11 +508,16 @@ namespace ClassLibrary.Migrations
                     b.Property<DateTime>("StartDate")
                         .HasColumnType("datetime");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("EquipmentId");
 
                     b.HasIndex("RentalStatus");
+
+                    b.HasIndex("UserId");
 
                     b.ToTable("Rental_Request");
                 });
@@ -851,11 +856,19 @@ namespace ClassLibrary.Migrations
                         .IsRequired()
                         .HasConstraintName("FK_Rental_Request_Rental_Status");
 
+                    b.HasOne("ClassLibrary.Models.User", "User")
+                        .WithMany("RentalRequests")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.Navigation("Equipment");
 
                     b.Navigation("RentalStatus1");
 
                     b.Navigation("RentalStatusNavigation");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("ClassLibrary.Models.RentalTransaction", b =>
@@ -977,6 +990,8 @@ namespace ClassLibrary.Migrations
                     b.Navigation("Logs");
 
                     b.Navigation("Notifications");
+
+                    b.Navigation("RentalRequests");
 
                     b.Navigation("RentalTransactions");
                 });

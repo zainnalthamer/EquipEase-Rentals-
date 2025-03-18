@@ -27,6 +27,12 @@ public partial class RentalRequest
 
     public int RentalStatus { get; set; }
 
+    public int UserId { get; set; }
+
+    [ForeignKey("UserId")]
+    [InverseProperty("RentalRequests")]
+    public virtual User User { get; set; } = null!;
+
     [ForeignKey("EquipmentId")]
     [InverseProperty("RentalRequests")]
     public virtual Equipment Equipment { get; set; } = null!;
