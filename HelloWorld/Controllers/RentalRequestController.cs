@@ -14,7 +14,7 @@ namespace Rental.Controllers
 
         public RentalRequestController(DBContext context)
         {
-            _context = context ?? throw new ArgumentNullException(nameof(context)); // Prevents null reference
+            _context = context ?? throw new ArgumentNullException(nameof(context)); 
         }
 
         // List all rental requests
@@ -47,7 +47,7 @@ namespace Rental.Controllers
                 StartDate = DateTime.Now,
                 ReturnDate = DateTime.Now.AddDays(7),
                 Cost = equipment.Price * 7,
-                RentalStatus = 1 // Pending (Based on Seeded Data)
+                RentalStatus = 1 
             };
 
             try
