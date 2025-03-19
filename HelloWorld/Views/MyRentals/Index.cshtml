@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "My Rental History";
+    @model List<Rental.Models.MyRentals>;
 }
 
 <section class="container mx-auto py-16">
@@ -24,15 +25,15 @@
                     {
                         <tr class="border-b hover:bg-gray-100">
                             <td class="px-6 py-4">@rental.Id</td>
-                            <td class="px-6 py-4">@rental.Equipment.Name</td>
+                            <td class="px-6 py-4">@rental.EquipmentName</td>
                             <td class="px-6 py-4">@rental.StartDate.ToShortDateString()</td>
-                            <td class="px-6 py-4">@rental.ReturnDate.ToShortDateString()</td>
+                            <td class="px-6 py-4">@rental.EndDate.ToShortDateString()</td>
                             <td class="px-6 py-4">$@rental.Cost</td>
                             <td class="px-6 py-4">
                                 <span class="px-3 py-1 rounded-lg text-white
-                                    @(rental.RentalStatus1.StatusName == "Pending" ? "bg-yellow-500" :
-                                      rental.RentalStatus1.StatusName == "Approved" ? "bg-green-500" : "bg-red-500")">
-                                    @rental.RentalStatus1.StatusName
+                                    @(rental.RentalStatus == "Pending" ? "bg-yellow-500" :
+                                      rental.RentalStatus == "Approved" ? "bg-green-500" : "bg-red-500")">
+                                    @rental.RentalStatus
                                 </span>
                             </td>
                         </tr>
