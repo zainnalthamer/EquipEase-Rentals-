@@ -73,8 +73,7 @@
               "RelativeToolTip": "ClassLibrary\\Context\\DBContext.cs",
               "ViewState": "AgIAALwAAAAAAAAAAAAYwNAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T07:01:15.329Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T07:01:15.329Z"
             },
             {
               "$type": "Document",
@@ -86,8 +85,7 @@
               "RelativeToolTip": "HelloWorld\\Controllers\\EquipmentController.cs",
               "ViewState": "AgIAANQAAAAAAAAAAAAgwOYAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-16T06:08:43.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-16T06:08:43.087Z"
             },
             {
               "$type": "Document",
@@ -99,8 +97,7 @@
               "RelativeToolTip": "HelloWorld\\Views\\Home\\Index.cshtml",
               "ViewState": "AgIAACQAAAAAAAAAAAAkwDwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-19T02:45:57.24Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-19T02:45:57.24Z"
             },
             {
               "$type": "Document",
@@ -108,9 +105,9 @@
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Views\\Equipment\\Index.cshtml",
               "RelativeDocumentMoniker": "HelloWorld\\Views\\Equipment\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Views\\Equipment\\Index.cshtml",
-              "RelativeToolTip": "HelloWorld\\Views\\Equipment\\Index.cshtml",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAEgAAAARAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Views\\Equipment\\Index.cshtml*",
+              "RelativeToolTip": "HelloWorld\\Views\\Equipment\\Index.cshtml*",
+              "ViewState": "AgIAADIAAAAAAAAAAAAowEkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-19T02:45:12.916Z",
               "EditorCaption": ""
