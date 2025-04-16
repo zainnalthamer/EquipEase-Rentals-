@@ -1,0 +1,78 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+    <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-semibold">Total Managers</h3>
+        <p class="text-3xl font-bold text-orange-500">@ViewBag.TotalManagers</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-semibold">Total Customers</h3>
+        <p class="text-3xl font-bold text-orange-500">@ViewBag.TotalCustomers</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-semibold">Total Equipment</h3>
+        <p class="text-3xl font-bold text-orange-500">@ViewBag.TotalEquipment</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-semibold">Available Equipment</h3>
+        <p class="text-3xl font-bold text-green-500">@ViewBag.AvailableEquipment</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-semibold">Unavailable Equipment</h3>
+        <p class="text-3xl font-bold text-red-500">@ViewBag.UnavailableEquipment</p>
+    </div>
+    <div class="bg-white p-6 rounded-lg shadow">
+        <h3 class="text-lg font-semibold">Rental Requests</h3>
+        <p class="text-3xl font-bold text-orange-500">@ViewBag.RentalRequests</p>
+    </div>
+</div>
+
+<div class="bg-white p-6 rounded-lg shadow mt-8">
+    <h3 class="text-lg font-semibold mb-4">Equipment Availability</h3>
+    <canvas id="availabilityChart" class="w-full max-w-md mx-auto"></canvas>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('availabilityChart').getContext('2d');
+
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Available', 'Unavailable', 'Under Maintenance'],
+                datasets: [{
+                    label: 'Equipment Status',
+                    data: [
+        @ViewBag.AvailableEquipment,
+        @ViewBag.UnavailableEquipment,
+        @ViewBag.MaintenanceEquipment
+                    ],
+                    backgroundColor: [
+                        '#22c55e', // green
+                        '#ef4444', // red
+                        '#facc15'  // yellow
+                    ],
+                    borderColor: '#ffffff',
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            color: '#374151', // Tailwind gray-700
+                            font: {
+                                size: 14
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+}

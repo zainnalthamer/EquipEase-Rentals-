@@ -1,5 +1,6 @@
 ﻿using ClassLibrary.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 using Newtonsoft.Json;
 using System.Text;
 
@@ -32,5 +33,12 @@ namespace Rental.Controllers
             var user = JsonConvert.DeserializeObject<User>(cookieValue);
             return user;
         }
+        public override void OnActionExecuting(ActionExecutingContext context)
+        {
+            ViewBag.User = GetUserObject();
+            ViewBag.IsAuthenticated = ViewBag.User != null;
+            base.OnActionExecuting(context);
+        }
+
     }
 }

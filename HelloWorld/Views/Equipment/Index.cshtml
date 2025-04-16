@@ -10,7 +10,6 @@
     </div>
 </section>
 
-
 <!-- Search and Filter Section -->
 <section class="container mx-auto py-12 px-6">
     <div class="flex flex-col md:flex-row justify-between items-center bg-white p-6 rounded-xl shadow-md">
@@ -31,9 +30,9 @@
                 <i class="fa-solid fa-plus"></i> Add
             </button>
         </div>
-
     </div>
 </section>
+
 @if (ViewBag.User != null && ViewBag.User.RoleId != 3)
 {
     <section class="container mx-auto py-12 px-6">
@@ -100,8 +99,40 @@
                 </div>
                 <div id="edit-@item.Id" class="hidden space-y-2 mt-4">
                     <input type="text" id="editName-@item.Id" class="w-full border rounded px-2 py-1" value="@item.Name">
-                    <input type="text" id="editDescription-@item.Id" class="w-full border rounded px-2 py-1" value="@item.Description">
+                    <textarea id="editDescription-@item.Id" class="w-full border rounded px-2 py-1" rows="2">@item.Description</textarea>
                     <input type="number" id="editPrice-@item.Id" class="w-full border rounded px-2 py-1" step="0.01" value="@item.Price">
+
+                    <select id="editCategory-@item.Id" class="w-full border rounded px-2 py-1">
+                        @foreach (var category in ViewBag.Categories)
+                        {
+                            <option value="@category.Id" selected="@(item.CategoryId == category.Id)">
+                                @category.Name
+                            </option>
+                        }
+                    </select>
+
+
+
+                    <select id="editCondition-@item.Id" class="w-full border rounded px-2 py-1">
+                        @foreach (var condition in ViewBag.ConditionStatuses)
+                        {
+                            <option value="@condition.Id" selected="@(item.ConditionId == condition.Id)">
+                                @condition.Status
+                            </option>
+                        }
+                    </select>
+
+
+                    <select id="editAvailability-@item.Id" class="w-full border rounded px-2 py-1">
+                        @foreach (var availability in ViewBag.AvailabilityStatuses)
+                        {
+                            <option value="@availability.Id" selected="@(item.AvailableId == availability.Id)">
+                                @availability.Status
+                            </option>
+                        }
+                    </select>
+
+
                     <div class="flex gap-2">
                         <button onclick="saveEdit(@item.Id)" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded">Save</button>
                         <button onclick="cancelEdit(@item.Id)" class="bg-gray-400 hover:bg-gray-500 text-white px-3 py-1 rounded">Cancel</button>
@@ -159,15 +190,18 @@
         const name = document.getElementById(`editName-${id}`).value;
         const description = document.getElementById(`editDescription-${id}`).value;
         const price = document.getElementById(`editPrice-${id}`).value;
+        const categoryId = document.getElementById(`editCategory-${id}`).value;
+        const conditionId = document.getElementById(`editCondition-${id}`).value;
+        const availableId = document.getElementById(`editAvailability-${id}`).value;
 
         const formData = new FormData();
         formData.append("id", id);
         formData.append("name", name);
         formData.append("description", description);
         formData.append("price", price);
-        formData.append("categoryId", 1);
-        formData.append("conditionId", 1);
-        formData.append("availableId", 1);
+        formData.append("categoryId", categoryId);
+        formData.append("conditionId", conditionId);
+        formData.append("availableId", availableId);
 
         const response = await fetch("/Equipment/EditEquipment", {
             method: "POST",

@@ -3,8 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Dell\\Documents\\AdvancedProject\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\dell\\documents\\advancedproject\\helloworld\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\views\\admin\\dashboard.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\dell\\documents\\advancedproject\\helloworld\\views\\equipment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\views\\equipment\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\dell\\documents\\advancedproject\\helloworld\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\dell\\documents\\advancedproject\\helloworld\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\dell\\documents\\advancedproject\\helloworld\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\dell\\documents\\advancedproject\\helloworld\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|solutionrelative:helloworld\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{72868917-91F6-49FB-A794-D022C49BC913}|HelloWorld\\Rental.csproj|c:\\users\\dell\\documents\\advancedproject\\helloworld\\controllers\\equipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -29,7 +49,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 12,
           "Children": [
             {
               "$type": "Bookmark",
@@ -65,7 +85,72 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BaseController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "HelloWorld\\Controllers\\BaseController.cs",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "HelloWorld\\Controllers\\BaseController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:35:13.737Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "HelloWorld\\Controllers\\AdminController.cs",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "HelloWorld\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-16T08:34:24.955Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "HelloWorld\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "HelloWorld\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwBoAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-16T07:56:52.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "HelloWorld\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "HelloWorld\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-16T07:56:49.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Dashboard.cshtml",
+              "DocumentMoniker": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Views\\Admin\\Dashboard.cshtml",
+              "RelativeDocumentMoniker": "HelloWorld\\Views\\Admin\\Dashboard.cshtml",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Views\\Admin\\Dashboard.cshtml*",
+              "RelativeToolTip": "HelloWorld\\Views\\Admin\\Dashboard.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-04-16T07:56:24.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "DBContext.cs",
               "DocumentMoniker": "C:\\Users\\Dell\\Documents\\AdvancedProject\\ClassLibrary\\Context\\DBContext.cs",
               "RelativeDocumentMoniker": "ClassLibrary\\Context\\DBContext.cs",
@@ -77,7 +162,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "EquipmentController.cs",
               "DocumentMoniker": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Controllers\\EquipmentController.cs",
               "RelativeDocumentMoniker": "HelloWorld\\Controllers\\EquipmentController.cs",
@@ -89,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Views\\Home\\Index.cshtml",
               "RelativeDocumentMoniker": "HelloWorld\\Views\\Home\\Index.cshtml",
@@ -101,20 +186,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Views\\Equipment\\Index.cshtml",
               "RelativeDocumentMoniker": "HelloWorld\\Views\\Equipment\\Index.cshtml",
-              "ToolTip": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Views\\Equipment\\Index.cshtml*",
-              "RelativeToolTip": "HelloWorld\\Views\\Equipment\\Index.cshtml*",
-              "ViewState": "AgIAADIAAAAAAAAAAAAowEkAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Views\\Equipment\\Index.cshtml",
+              "RelativeToolTip": "HelloWorld\\Views\\Equipment\\Index.cshtml",
+              "ViewState": "AgIAAG4AAAAAAAAAAAAowIUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-19T02:45:12.916Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "dbo.User_Role.sql",
               "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NewDB/True/SqlTable/dbo.User_Role.sql",
               "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/NewDB/True/SqlTable/dbo.User_Role.sql",
