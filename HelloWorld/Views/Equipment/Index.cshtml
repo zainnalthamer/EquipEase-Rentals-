@@ -13,11 +13,16 @@
 @if (ViewBag.User != null && ViewBag.User.RoleId != 3)
 {
     <section class="container mx-auto py-12 px-6">
-        <h2 class="text-3xl font-bold mb-4">Manage Equipment</h2>
+        <div class="flex justify-between items-center mb-6">
+            <h2 class="text-3xl font-bold">Manage Equipment</h2>
+            <button onclick="toggleAddForm()" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
+                <i class="fa-solid fa-plus"></i> Add Equipment
+            </button>
+        </div>
 
         <div class="grid md:grid-cols-2 gap-8">
             <!-- Add Equipment Form -->
-            <div class="bg-gray-100 p-6 rounded-lg shadow-lg">
+            <div id="addEquipmentForm" class="bg-gray-100 p-6 rounded-lg shadow-lg hidden">
                 <h3 class="text-xl font-semibold mb-4">Add New Equipment</h3>
                 <form asp-controller="Equipment" asp-action="AddEquipment" method="post" enctype="multipart/form-data">
                     <div class="grid grid-cols-1 gap-4">
@@ -30,25 +35,24 @@
                                 <option value="@category.Id">@category.Name</option>
                             }
                         </select>
+                        <select name="conditionId" class="border border-gray-300 rounded-lg px-4 py-2" required>
+                            <option value="">Select Condition</option>
+                            @foreach (var condition in ViewBag.ConditionStatuses)
+                            {
+                                <option value="@condition.Id">@condition.Status</option>
+                            }
+                        </select>
+                        <select name="availableId" class="border border-gray-300 rounded-lg px-4 py-2" required>
+                            <option value="">Select Availability</option>
+                            @foreach (var availability in ViewBag.AvailabilityStatuses)
+                            {
+                                <option value="@availability.Id">@availability.Status</option>
+                            }
+                        </select>
                         <input type="number" name="price" placeholder="Price" step="0.01" class="border border-gray-300 rounded-lg px-4 py-2" required>
                         <input type="file" name="image" accept="image/*" class="border border-gray-300 rounded-lg px-4 py-2" required>
                     </div>
                     <button type="submit" class="mt-4 bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">Add Equipment</button>
-                </form>
-            </div>
-
-            <!-- Edit Equipment Form -->
-            <div id="editEquipmentSection" class="bg-gray-100 p-6 rounded-lg shadow-lg">
-                <h3 class="text-xl font-semibold mb-4">Edit Equipment</h3>
-                <form asp-controller="Equipment" asp-action="EditEquipment" method="post" enctype="multipart/form-data">
-                    <input type="hidden" id="editId" name="id">
-                    <div class="grid grid-cols-1 gap-4">
-                        <input type="text" id="editName" name="name" placeholder="Equipment Name" class="border border-gray-300 rounded-lg px-4 py-2" required>
-                        <textarea id="editDescription" name="description" placeholder="Description" class="border border-gray-300 rounded-lg px-4 py-2 h-32" required></textarea>
-                        <input type="number" id="editPrice" name="price" placeholder="Price" step="0.01" class="border border-gray-300 rounded-lg px-4 py-2" required>
-                        <input type="file" name="image" accept="image/*" class="border border-gray-300 rounded-lg px-4 py-2">
-                    </div>
-                    <button type="submit" class="mt-4 bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg">Save Changes</button>
                 </form>
             </div>
         </div>
@@ -59,20 +63,18 @@
 <section class="container mx-auto py-12 px-6">
     <div class="flex flex-col md:flex-row justify-between items-center bg-gray-100 p-6 rounded-lg shadow-lg">
         <div class="flex flex-col md:flex-row gap-5 items-center w-[50%]">
-        <input type="text" id="search" placeholder="Search equipment..." class="border border-gray-300 rounded-lg px-4 py-2 w-full mb-4 md:mb-0">
-        <button onclick="searchEquipment()" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">Search</button>
+            <input type="text" id="search" placeholder="Search equipment..." class="border border-gray-300 rounded-lg px-4 py-2 w-full mb-4 md:mb-0">
+            <button onclick="searchEquipment()" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">Search</button>
         </div>
-
         <div class="flex flex-col md:flex-row gap-5 items-center w-[30%]">
-
-        <select id="categoryFilter" class="border border-gray-300 rounded-lg px-4 py-2 w-full md:w-[80%] mb-4 md:mb-0" onchange="filterEquipment()">
-            <option value="">All Categories</option>
-            @foreach (var category in ViewBag.Categories)
-            {
-                <option value="@category.Id">@category.Name</option>
-            }
-        </select>
-        <button onclick="filterEquipment()" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">Filter</button>
+            <select id="categoryFilter" class="border border-gray-300 rounded-lg px-4 py-2 w-full md:w-[80%] mb-4 md:mb-0" onchange="filterEquipment()">
+                <option value="">All Categories</option>
+                @foreach (var category in ViewBag.Categories)
+                {
+                    <option value="@category.Id">@category.Name</option>
+                }
+            </select>
+            <button onclick="filterEquipment()" class="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-lg">Filter</button>
         </div>
     </div>
 </section>
@@ -80,16 +82,49 @@
 <!-- Equipment Listing -->
 <section class="container mx-auto py-8 px-6">
     <h2 class="text-3xl font-bold text-center mb-8">Available Equipment</h2>
-    <div id="equipmentList" class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+    <div id="equipmentList" class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         @foreach (var item in ViewBag.EquipmentList)
         {
-            <a href="@Url.Action("Details", "Equipment", new { id = item.Id })" class="block bg-white rounded-lg shadow-lg p-4 cursor-pointer hover:shadow-xl transition-shadow transform hover:scale-105 transition-all duration-200">
-                <img src="@(item.ImageUrl != null ? "data:image/png;base64," + item.ImageUrl : "/images/default-image.png")" alt="@item.Name" class="w-full h-48 object-cover rounded-md">
-                <h3 class="text-xl font-semibold mt-4">@item.Name</h3>
-                <p class="text-gray-600">@item.CategoryName</p>
-                <p class="text-gray-900 font-bold">$@item.Price</p>
-                <p class="text-sm text-gray-500">Status: <span class="@(item.AvailableId == 1 ? "text-green-500" : "text-red-500")">@(item.AvailableId == 1 ? "Available" : "Unavailable")</span></p>
-            </a>
+            <div class="relative bg-white rounded-lg shadow-md hover:shadow-xl transform hover:scale-105 transition duration-200 p-4">
+                <div id="display-@item.Id">
+                    <a href="@Url.Action("Details", "Equipment", new { id = item.Id })">
+                        <img src="@(item.ImageUrl != null ? "data:image/png;base64," + item.ImageUrl : "/images/default-image.png")"
+                             alt="@item.Name"
+                             class="w-full h-48 object-cover rounded-t-lg">
+                    </a>
+                    <h3 class="text-lg font-bold">@item.Name</h3>
+                    <p class="text-gray-500 text-sm">@item.CategoryName</p>
+                    <p class="text-black font-semibold mt-1">$@item.Price</p>
+                    <p class="text-sm mt-1">
+                        Status:
+                        <span class="@(item.AvailableId == 1 ? "text-green-500" : "text-red-500") font-medium">
+                            @(item.AvailableId == 1 ? "Available" : "Unavailable")
+                        </span>
+                    </p>
+                </div>
+                <div id="edit-@item.Id" class="hidden space-y-2">
+                    <input type="text" id="editName-@item.Id" class="w-full border rounded px-2 py-1" value="@item.Name">
+                    <input type="text" id="editDescription-@item.Id" class="w-full border rounded px-2 py-1" value="@item.Description">
+                    <input type="number" id="editPrice-@item.Id" class="w-full border rounded px-2 py-1" step="0.01" value="@item.Price">
+                    <div class="flex gap-2">
+                        <button onclick="saveEdit(@item.Id)" class="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded">Save</button>
+                        <button onclick="cancelEdit(@item.Id)" class="bg-gray-400 hover:bg-gray-500 text-white px-3 py-1 rounded">Cancel</button>
+                    </div>
+                </div>
+                @if (ViewBag.User != null && ViewBag.User.RoleId != 3)
+                {
+                    <div class="absolute top-2 right-2 flex space-x-3">
+                        <a href="javascript:void(0);" onclick="startEdit(@item.Id)" class="text-blue-600 hover:text-blue-800">
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                        <form method="post" asp-controller="Equipment" asp-action="DeleteEquipment" asp-route-id="@item.Id" onsubmit="return confirm('Are you sure you want to delete this equipment?');" class="inline">
+                            <button type="submit" class="text-red-600 hover:text-red-800">
+                                <i class="fa-solid fa-trash"></i>
+                            </button>
+                        </form>
+                    </div>
+                }
+            </div>
         }
     </div>
 </section>
@@ -102,8 +137,51 @@
             item.style.display = name.includes(input) ? "block" : "none";
         });
     }
+
     function filterEquipment() {
         var categoryId = document.getElementById("categoryFilter").value;
         window.location.href = categoryId ? "/Equipment/Index?categoryId=" + categoryId : "/Equipment/Index";
+    }
+
+    function toggleAddForm() {
+        const form = document.getElementById('addEquipmentForm');
+        form.classList.toggle('hidden');
+        form.scrollIntoView({ behavior: "smooth" });
+    }
+
+    function startEdit(id) {
+        document.getElementById(`display-${id}`).classList.add('hidden');
+        document.getElementById(`edit-${id}`).classList.remove('hidden');
+    }
+
+    function cancelEdit(id) {
+        document.getElementById(`edit-${id}`).classList.add('hidden');
+        document.getElementById(`display-${id}`).classList.remove('hidden');
+    }
+
+    async function saveEdit(id) {
+        const name = document.getElementById(`editName-${id}`).value;
+        const description = document.getElementById(`editDescription-${id}`).value;
+        const price = document.getElementById(`editPrice-${id}`).value;
+
+        const formData = new FormData();
+        formData.append("id", id);
+        formData.append("name", name);
+        formData.append("description", description);
+        formData.append("price", price);
+        formData.append("categoryId", 1);      // Adjust as needed
+        formData.append("conditionId", 1);
+        formData.append("availableId", 1);
+
+        const response = await fetch("/Equipment/EditEquipment", {
+            method: "POST",
+            body: formData
+        });
+
+        if (response.ok) {
+            location.reload();
+        } else {
+            alert("Failed to update equipment.");
+        }
     }
 </script>

@@ -111,7 +111,35 @@ namespace Rental.Controllers
             return RedirectToAction("Index");
         }
         [HttpPost]
-        public async Task<IActionResult> Delete(int id)
+        public async Task<IActionResult> DeleteEquipment(int id)
+        {
+            if (!IsAuthenticated())
+            {
+                return Redirect("/SignIn");
+            }
+
+            var equipment = await _context.Equipment
+                .Include(e => e.FeedBacks) // Include related feedbacks
+                .FirstOrDefaultAsync(e => e.Id == id);
+
+            if (equipment == null)
+            {
+                return NotFound();
+            }
+
+            // Remove related feedbacks
+            if (equipment.FeedBacks.Any())
+            {
+                _context.FeedBacks.RemoveRange(equipment.FeedBacks);
+            }
+
+            _context.Equipment.Remove(equipment);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public async Task<IActionResult> EditEquipment(int id)
         {
             if (!IsAuthenticated())
             {
@@ -124,34 +152,43 @@ namespace Rental.Controllers
                 return NotFound();
             }
 
-            _context.Equipment.Remove(equipment);
-            await _context.SaveChangesAsync();
+            ViewBag.Categories = await _context.Categories.ToListAsync();
+            ViewBag.ConditionStatuses = await _context.ConditionStatuses.ToListAsync();
+            ViewBag.AvailabilityStatuses = await _context.AvailableStatuses.ToListAsync();
 
             return RedirectToAction("Index");
         }
         [HttpPost]
-        public IActionResult EditEquipment(Equipment model, IFormFile image)
+        public async Task<IActionResult> EditEquipment(int id, string name, string description, int categoryId, decimal price, int availableId, int conditionId, IFormFile? image)
         {
-            var equipment = _context.Equipment.Find(model.Id);
-            if (equipment == null) return NotFound();
-
-            equipment.Name = model.Name;
-            equipment.Description = model.Description;
-            equipment.CategoryId = model.CategoryId;
-            equipment.Price = model.Price;
-            equipment.AvailableId = model.AvailableId;
-            equipment.ConditionId = model.ConditionId;
-
-            if (image != null)
+            if (!IsAuthenticated())
             {
-                using (var ms = new MemoryStream())
+                return Redirect("/SignIn");
+            }
+
+            var equipment = await _context.Equipment.FindAsync(id);
+            if (equipment == null)
+            {
+                return NotFound();
+            }
+
+            equipment.Name = name;
+            equipment.Description = description;
+            equipment.CategoryId = categoryId;
+            equipment.Price = price;
+            equipment.AvailableId = availableId;
+            equipment.ConditionId = conditionId;
+
+            if (image != null && image.Length > 0)
+            {
+                using (var memoryStream = new MemoryStream())
                 {
-                    image.CopyTo(ms);
-                    equipment.Image = ms.ToArray();
+                    await image.CopyToAsync(memoryStream);
+                    equipment.Image = memoryStream.ToArray();
                 }
             }
 
-            _context.SaveChanges();
+            await _context.SaveChangesAsync();
             return RedirectToAction("Index");
         }
 
