@@ -1,28 +1,35 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using System.Linq;
-using ClassLibrary.Models;
 using System.Text;
 using Newtonsoft.Json;
+using Rental.Models;
+using ClassLibrary.Models;
 
 namespace Rental.Controllers
 {
     public class SignInController : BaseController
     {
-        public string users;
+        public SignInController(ClassLibrary.Persistence.DBContext context) : base(context) { }
 
-        public SignInController(ClassLibrary.Persistence.DBContext context) : base(context)
+        [HttpGet]
+        public IActionResult Index()
         {
-
+            return View(new SignInViewModel());
         }
 
         [HttpPost]
-        public IActionResult SignIn(string username, string password)
+        public IActionResult SignIn(SignInViewModel model)
         {
+            if (!ModelState.IsValid)
+            {
+                model.ErrorMessage = "Invalid input.";
+                return View("Index", model);
+            }
+
             try
             {
-                // fetch the user from the database. if user was not found throw an exception
                 var user = _context.Users
-                    .FirstOrDefault(u => u.Email == username && u.Password == password) ?? throw new Exception("User not fonud");
+                    .FirstOrDefault(u => u.Email == model.Username && u.Password == model.Password)
+                    ?? throw new Exception("User not found");
 
                 var json = JsonConvert.SerializeObject(user);
                 var credBase64 = Convert.ToBase64String(Encoding.UTF8.GetBytes(json));
@@ -34,22 +41,14 @@ namespace Rental.Controllers
                     Expires = DateTime.UtcNow.AddHours(24)
                 });
 
-                ViewBag.Message = "User logged Successfully";
-                users=user.Id.ToString();
-
+                model.Message = "User logged in successfully!";
+                return RedirectToAction("Index", "Home");
             }
             catch (Exception ex)
             {
-                ViewBag.ErrorMessage = ex.Message;
+                model.ErrorMessage = ex.Message;
+                return View("Index", model);
             }
-
-            return Redirect("/Home");
-        }
-
-
-        public IActionResult Index()
-        {
-            return View();
         }
     }
 }
