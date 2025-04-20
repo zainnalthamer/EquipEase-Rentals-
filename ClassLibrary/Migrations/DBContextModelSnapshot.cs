@@ -481,6 +481,56 @@ namespace ClassLibrary.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Product_Status");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AvailableId = 1,
+                            ConditionId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AvailableId = 1,
+                            ConditionId = 1
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AvailableId = 1,
+                            ConditionId = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AvailableId = 1,
+                            ConditionId = 1
+                        },
+                        new
+                        {
+                            Id = 5,
+                            AvailableId = 1,
+                            ConditionId = 1
+                        },
+                        new
+                        {
+                            Id = 6,
+                            AvailableId = 1,
+                            ConditionId = 1
+                        },
+                        new
+                        {
+                            Id = 7,
+                            AvailableId = 1,
+                            ConditionId = 1
+                        },
+                        new
+                        {
+                            Id = 8,
+                            AvailableId = 1,
+                            ConditionId = 1
+                        });
                 });
 
             modelBuilder.Entity("ClassLibrary.Models.RentalRequest", b =>

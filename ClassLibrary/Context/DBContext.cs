@@ -97,6 +97,17 @@ public partial class DBContext : DbContext
             new RentalStatus { Id=7,Status= "Overdue" },
             new RentalStatus { Id=8,Status= "Completed" }
             );
+        modelBuilder.Entity<ProductStatus>().HasData(
+    new ProductStatus { Id = 1, AvailableId = 1, ConditionId = 1 },
+    new ProductStatus { Id = 2, AvailableId = 1, ConditionId = 1 },
+    new ProductStatus { Id = 3, AvailableId = 1, ConditionId = 1 },
+    new ProductStatus { Id = 4, AvailableId = 1, ConditionId = 1 },
+    new ProductStatus { Id = 5, AvailableId = 1, ConditionId = 1 },
+    new ProductStatus { Id = 6, AvailableId = 1, ConditionId = 1 },
+    new ProductStatus { Id = 7, AvailableId = 1, ConditionId = 1 },
+    new ProductStatus { Id = 8, AvailableId = 1, ConditionId = 1 }
+);
+
 
 
         modelBuilder.Entity<Document>(entity =>

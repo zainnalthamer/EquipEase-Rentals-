@@ -1,6 +1,7 @@
-﻿@{
+﻿@model List<Rental.Models.MyRentals>
+
+@{
     ViewData["Title"] = "My Rental History";
-    @model List<Rental.Models.MyRentals>;
 }
 
 <section class="container mx-auto py-16">
@@ -27,7 +28,7 @@
                             <td class="px-6 py-4">@rental.Id</td>
                             <td class="px-6 py-4">@rental.EquipmentName</td>
                             <td class="px-6 py-4">@rental.StartDate.ToShortDateString()</td>
-                            <td class="px-6 py-4">@rental.EndDate.ToShortDateString()</td>
+                            <td class="px-6 py-4">@rental.ReturnDate.ToShortDateString()</td>
                             <td class="px-6 py-4">$@rental.Cost</td>
                             <td class="px-6 py-4">
                                 <span class="px-3 py-1 rounded-lg text-white

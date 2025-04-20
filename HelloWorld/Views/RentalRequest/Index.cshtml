@@ -1,18 +1,23 @@
 ﻿@model List<ClassLibrary.Models.RentalRequest>
 
-<h1 class="text-2xl font-bold mb-4">Rental Requests</h1>
+<h1 class="text-2xl font-bold mb-4">My Rental Requests</h1>
 
 @if (TempData["SuccessMessage"] != null)
 {
     <p class="text-green-500">@TempData["SuccessMessage"]</p>
 }
 
-@if (Model.Any())
+@if (TempData["ErrorMessage"] != null)
+{
+    <p class="text-red-500">@TempData["ErrorMessage"]</p>
+}
+
+@if (Model != null && Model.Any())
 {
     <table class="border-collapse border border-gray-400 w-full">
         <thead>
             <tr class="bg-gray-200">
-                <th class="border border-gray-400 px-4 py-2">Equipment ID</th>
+                <th class="border border-gray-400 px-4 py-2">Equipment Name</th>
                 <th class="border border-gray-400 px-4 py-2">Start Date</th>
                 <th class="border border-gray-400 px-4 py-2">Return Date</th>
                 <th class="border border-gray-400 px-4 py-2">Cost</th>
