@@ -119,12 +119,20 @@ namespace Rental.Controllers
             }
 
             var equipment = await _context.Equipment
-                .Include(e => e.FeedBacks) // Include related feedbacks
+                .Include(e => e.FeedBacks)
                 .FirstOrDefaultAsync(e => e.Id == id);
 
             if (equipment == null)
             {
                 return NotFound();
+            }
+
+            // ✅ NEW: Block delete if there are rental requests
+            var hasRentalRequests = _context.RentalRequests.Any(r => r.EquipmentId == id);
+            if (hasRentalRequests)
+            {
+                TempData["ErrorMessage"] = "Cannot delete equipment. It has related rental requests.";
+                return RedirectToAction("Index");
             }
 
             // Remove related feedbacks
