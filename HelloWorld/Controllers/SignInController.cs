@@ -17,7 +17,7 @@ namespace Rental.Controllers
         }
 
         [HttpPost]
-        public IActionResult SignIn(SignInViewModel model)
+        public async Task<IActionResult> SignIn(SignInViewModel model)
         {
             if (!ModelState.IsValid)
             {
@@ -40,6 +40,8 @@ namespace Rental.Controllers
                     HttpOnly = true,
                     Expires = DateTime.UtcNow.AddHours(24)
                 });
+
+                await SaveLogManualUserIdAsync(user.Id, $"{user.Fname} {user.Lname}", "Login", $"User {user.Fname} {user.Lname} logged in", "Web");
 
                 model.Message = "User logged in successfully!";
                 return RedirectToAction("Index", "Home");

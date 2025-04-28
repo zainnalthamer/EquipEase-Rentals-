@@ -10,9 +10,7 @@ namespace Rental.Controllers
 {
     public class EquipmentController : BaseController
     {
-        public EquipmentController(DBContext context) : base(context)
-        {
-        }
+        public EquipmentController(DBContext context) : base(context) { }
 
         public async Task<IActionResult> Index(int? categoryId)
         {
@@ -23,6 +21,7 @@ namespace Rental.Controllers
             }
 
             ViewBag.IsAuthenticated = true;
+
             try
             {
                 var equipmentQuery = _context.Equipment.AsQueryable();
@@ -48,24 +47,12 @@ namespace Rental.Controllers
                     .ToListAsync();
 
                 ViewBag.EquipmentList = equipmentList;
-                //ViewBag.User=await _context.Users.User
-                //var userEmail = User.Identity.Name; // This retrieves the email of the logged-in user
-                //ViewBag.User = await _context.Users.Include(u => u.Role).FirstOrDefaultAsync(u => u.Email == userEmail);
                 ViewBag.Categories = await _context.Categories.ToListAsync();
                 ViewBag.ConditionStatuses = await _context.ConditionStatuses.ToListAsync();
                 ViewBag.AvailabilityStatuses = await _context.AvailableStatuses.ToListAsync();
-                //var userEmail = User.Identity.Name;
 
                 var user = GetUserObject();
-                if (user != null)
-                {
-                    ViewBag.User = user;
-                }
-                else
-                {
-                    ViewBag.User = null;
-                }
-
+                ViewBag.User = user;
             }
             catch (Exception e)
             {
@@ -108,8 +95,12 @@ namespace Rental.Controllers
             _context.Equipment.Add(newEquipment);
             await _context.SaveChangesAsync();
 
+            // ✅ Save Log
+            await SaveLogAsync("Add Equipment", $"Name: {newEquipment.Name}", "Web");
+
             return RedirectToAction("Index");
         }
+
         [HttpPost]
         public async Task<IActionResult> DeleteEquipment(int id)
         {
@@ -127,7 +118,6 @@ namespace Rental.Controllers
                 return NotFound();
             }
 
-            // ✅ NEW: Block delete if there are rental requests
             var hasRentalRequests = _context.RentalRequests.Any(r => r.EquipmentId == id);
             if (hasRentalRequests)
             {
@@ -135,7 +125,6 @@ namespace Rental.Controllers
                 return RedirectToAction("Index");
             }
 
-            // Remove related feedbacks
             if (equipment.FeedBacks.Any())
             {
                 _context.FeedBacks.RemoveRange(equipment.FeedBacks);
@@ -144,8 +133,12 @@ namespace Rental.Controllers
             _context.Equipment.Remove(equipment);
             await _context.SaveChangesAsync();
 
+            // ✅ Save Log
+            await SaveLogAsync("Delete Equipment", $"Name: {equipment.Name}", "Web");
+
             return RedirectToAction("Index");
         }
+
         [HttpGet]
         public async Task<IActionResult> EditEquipment(int id)
         {
@@ -166,6 +159,7 @@ namespace Rental.Controllers
 
             return RedirectToAction("Index");
         }
+
         [HttpPost]
         public async Task<IActionResult> EditEquipment(int id, string name, string description, int categoryId, decimal price, int availableId, int conditionId, IFormFile? image)
         {
@@ -197,9 +191,12 @@ namespace Rental.Controllers
             }
 
             await _context.SaveChangesAsync();
+
+            // ✅ Save Log
+            await SaveLogAsync("Edit Equipment", $"Updated Equipment ID: {equipment.Id}", "Web");
+
             return RedirectToAction("Index");
         }
-
 
         public async Task<IActionResult> Details(int id)
         {
@@ -217,8 +214,8 @@ namespace Rental.Controllers
                     .Include(e => e.Category)
                     .Include(e => e.Available)
                     .Include(e => e.Condition)
-                    .Include(e => e.FeedBacks) // Include feedbacks
-                    .ThenInclude(f => f.User)  // Include users who left feedback
+                    .Include(e => e.FeedBacks)
+                    .ThenInclude(f => f.User)
                     .FirstOrDefaultAsync(e => e.Id == id);
 
                 if (equipment == null)
@@ -226,10 +223,10 @@ namespace Rental.Controllers
                     return NotFound();
                 }
 
-                ViewBag.FeedbackList = equipment.FeedBacks.ToList(); // Pass feedback to the view
+                ViewBag.FeedbackList = equipment.FeedBacks.ToList();
 
                 var user = GetUserObject();
-                ViewBag.User = user ?? null;
+                ViewBag.User = user;
 
                 return View(equipment);
             }
@@ -239,6 +236,5 @@ namespace Rental.Controllers
                 return View("Error");
             }
         }
-
     }
 }

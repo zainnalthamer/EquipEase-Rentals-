@@ -39,6 +39,48 @@ namespace Rental.Controllers
             ViewBag.IsAuthenticated = ViewBag.User != null;
             base.OnActionExecuting(context);
         }
+        protected async Task SaveLogAsync(string action, string affectedData, string source)
+        {
+            if (_context != null)
+            {
+                var user = GetUserObject();
+                if (user != null)
+                {
+                    var fullName = $"{user.Fname} {user.Lname}";
+
+                    var log = new Log
+                    {
+                        Action = $"{action} by {fullName}", // ✨ show name in action field
+                        TimeStamp = DateTime.UtcNow,
+                        AffectedData = affectedData,
+                        Source = source,
+                        UserId = user.Id
+                    };
+
+                    _context.Logs.Add(log);
+                    await _context.SaveChangesAsync();
+                }
+            }
+        }
+
+        protected async Task SaveLogManualUserIdAsync(int userId, string fullName, string action, string affectedData, string source)
+        {
+            if (_context != null)
+            {
+                var log = new Log
+                {
+                    Action = action,
+                    TimeStamp = DateTime.UtcNow,
+                    AffectedData = affectedData,
+                    Source = source,
+                    UserId = userId
+                };
+
+                _context.Logs.Add(log);
+                await _context.SaveChangesAsync();
+            }
+        }
+
 
     }
 }

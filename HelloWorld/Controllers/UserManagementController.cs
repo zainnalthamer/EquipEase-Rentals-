@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ClassLibrary.Models;
+using System.Threading.Tasks;
 
 namespace Rental.Controllers
 {
@@ -16,7 +17,7 @@ namespace Rental.Controllers
 
             var users = _context.Users
                 .Include(u => u.Role)
-                .Where(u => u.RoleId != 1) // Exclude Admins
+                .Where(u => u.RoleId != 1) // Exclude Admins from being listed
                 .ToList();
 
             return View(users);
@@ -43,9 +44,12 @@ namespace Rental.Controllers
                 user.Password = newPassword.Trim();
                 await _context.SaveChangesAsync();
 
+                // ✅ Save log after successful password update
+                await SaveLogAsync("Update Password", $"Password updated for UserID: {user.Id}", "Web");
+
                 TempData["Success"] = $"Password updated successfully for {user.Email}.";
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 TempData["Error"] = "An error occurred while updating the password.";
             }

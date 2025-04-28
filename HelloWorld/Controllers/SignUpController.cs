@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ClassLibrary.Models;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Session;
 using System.Text;
 using Newtonsoft.Json;
 
@@ -9,23 +8,18 @@ namespace Rental.Controllers
 {
     public class SignUpController : BaseController
     {
-
-
-        public SignUpController(ClassLibrary.Persistence.DBContext context) : base(context)
-        {
-
-        }
+        public SignUpController(ClassLibrary.Persistence.DBContext context) : base(context) { }
 
         public IActionResult Index()
         {
             return View();
         }
+
         public IActionResult CheckAccount()
         {
             IEnumerable<ClassLibrary.Models.User> users = _context.Users;
             return Json(users);
         }
-
 
         [HttpPost]
         public async Task<IActionResult> CreateAccount(string firstName, string lastName, string email, string password, string confirmPassword)
@@ -54,6 +48,9 @@ namespace Rental.Controllers
 
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
+
+            // ✅ Save Log for account creation
+            await SaveLogAsync("Create Account", $"New User: {user.Email}", "Web");
 
             TempData["SuccessMessage"] = "Account successfully created! You can now sign in.";
 

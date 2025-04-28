@@ -28,15 +28,16 @@
             @foreach (var request in Model)
             {
                 <tr>
-                    <td class="border border-gray-400 px-4 py-2">@request.EquipmentId</td>
+                    <td class="border border-gray-400 px-4 py-2">@request.Equipment?.Name</td>
                     <td class="border border-gray-400 px-4 py-2">@request.StartDate.ToShortDateString()</td>
                     <td class="border border-gray-400 px-4 py-2">@request.ReturnDate.ToShortDateString()</td>
-                    <td class="border border-gray-400 px-4 py-2">@request.Cost</td>
-                    <td class="border border-gray-400 px-4 py-2">@request.RentalStatus</td>
+                    <td class="border border-gray-400 px-4 py-2">$@request.Cost</td>
+                    <td class="border border-gray-400 px-4 py-2">@request.RentalStatus1?.Status</td>
                 </tr>
             }
         </tbody>
     </table>
+
 }
 else
 {

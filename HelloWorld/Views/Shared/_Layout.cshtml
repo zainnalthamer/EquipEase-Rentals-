@@ -24,6 +24,8 @@
                     <a class="text-gray-600 hover:text-orange-500" asp-area="" asp-controller="Equipment" asp-action="Index">Equipment</a>
                     <a class="text-gray-600 hover:text-orange-500" asp-controller="RentalRequest" asp-action="Index">My Requests</a>
                     <a class="text-gray-600 hover:text-orange-500" asp-controller="UserManagement" asp-action="ManageUsers">User Management</a>
+                    <a class="text-gray-600 hover:text-orange-500" asp-controller="Logs" asp-action="Index">View Logs</a>
+
                 }
                 @if (ViewBag.User != null && ViewBag.User.RoleId !=3)
                 {
