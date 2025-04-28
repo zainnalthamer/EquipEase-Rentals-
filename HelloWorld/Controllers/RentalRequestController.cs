@@ -30,6 +30,50 @@ namespace Rental.Controllers
 
             return View(rentalHistory);
         }
+        public async Task<IActionResult> CreateRequestFromDetails(int equipmentId)
+        {
+            var user = GetUserObject();
+            if (user == null)
+            {
+                TempData["ErrorMessage"] = "Please log in.";
+                return RedirectToAction("Index", "SignIn");
+            }
+
+            var equipment = await _context.Equipment.FindAsync(equipmentId);
+            if (equipment == null)
+            {
+                TempData["ErrorMessage"] = "Equipment not found.";
+                return RedirectToAction("Index", "Equipment");
+            }
+
+            var request = new RentalRequest
+            {
+                EquipmentId = equipment.Id,
+                UserId = user.Id,
+                StartDate = DateTime.Now,
+                ReturnDate = DateTime.Now.AddDays(7),
+                Cost = equipment.Price * 7,
+                RentalStatus = 1 // Pending
+            };
+
+            try
+            {
+                await _context.RentalRequests.AddAsync(request);
+                await _context.SaveChangesAsync();
+
+                // ✅ Save log
+                await SaveLogAsync("Create Rental Request", $"Request created for Equipment: {equipment.Name}", "Web");
+
+                TempData["SuccessMessage"] = "Rental request created and is now pending approval.";
+                return RedirectToAction("Index"); // Go to My Requests page
+            }
+            catch (DbUpdateException ex)
+            {
+                TempData["ErrorMessage"] = $"Error creating rental request: {ex.InnerException?.Message ?? ex.Message}";
+                return RedirectToAction("Index");
+            }
+        }
+
 
         [HttpPost]
         public async Task<IActionResult> Create(int equipmentId)
@@ -124,54 +168,88 @@ namespace Rental.Controllers
             return RedirectToAction("Index");
         }
 
-        public IActionResult Payment(int equipmentId)
+        public async Task<IActionResult> Payment(int requestId)
         {
-            var equipment = _context.Equipment.FirstOrDefault(e => e.Id == equipmentId);
-            if (equipment == null)
+            var rentalRequest = await _context.RentalRequests
+                .Include(r => r.Equipment)
+                .FirstOrDefaultAsync(r => r.Id == requestId);
+
+            if (rentalRequest == null)
             {
-                TempData["ErrorMessage"] = "Equipment not found.";
-                return RedirectToAction("Index", "Equipment");
+                TempData["ErrorMessage"] = "Rental request not found.";
+                return RedirectToAction("Index");
             }
 
-            ViewBag.Equipment = equipment;
+            ViewBag.RentalRequest = rentalRequest;
             return View();
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateAfterPayment(int equipmentId)
+        public async Task<IActionResult> ConfirmPayment(int requestId)
         {
-            var user = GetUserObject();
-            if (user == null)
+            var rentalRequest = await _context.RentalRequests.FindAsync(requestId);
+            if (rentalRequest == null)
             {
-                TempData["ErrorMessage"] = "Please log in.";
-                return RedirectToAction("Index", "SignIn");
+                TempData["ErrorMessage"] = "Rental request not found.";
+                return RedirectToAction("Index");
             }
 
-            var equipment = await _context.Equipment.FindAsync(equipmentId);
-            if (equipment == null)
-            {
-                TempData["ErrorMessage"] = "Equipment not found.";
-                return RedirectToAction("Index", "Equipment");
-            }
-
-            var request = new RentalRequest
-            {
-                EquipmentId = equipment.Id,
-                UserId = user.Id,
-                StartDate = DateTime.Now,
-                ReturnDate = DateTime.Now.AddDays(7),
-                Cost = equipment.Price * 7,
-                RentalStatus = 1 // Pending
-            };
-
-            await _context.RentalRequests.AddAsync(request);
+            // Update status to Completed (Paid)
+            rentalRequest.RentalStatus = 8;
             await _context.SaveChangesAsync();
 
-            // ✅ Log action
-            await SaveLogAsync("Rental After Payment", $"Rental created for EquipmentID: {equipmentId}", "Web");
+            await SaveLogAsync("Payment Completed", $"Rental request {requestId} marked as paid.", "Web");
 
-            TempData["SuccessMessage"] = "Payment successful. Rental request created!";
+            TempData["SuccessMessage"] = "Payment successful!";
             return RedirectToAction("Index");
         }
+
+
+    
+        // Show all users' rental requests for Admin
+        public async Task<IActionResult> UserRequests()
+        {
+            var requests = await _context.RentalRequests
+                .Include(r => r.User)
+                .Include(r => r.Equipment)
+                .Include(r => r.RentalStatus1)
+                .ToListAsync();
+
+            return View(requests);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> AdminApprove(int requestId)
+        {
+            var request = await _context.RentalRequests.FindAsync(requestId);
+            if (request == null)
+            {
+                return NotFound();
+            }
+
+            request.RentalStatus = 2; // Approved
+            await _context.SaveChangesAsync();
+
+            TempData["SuccessMessage"] = "Request approved successfully.";
+            return RedirectToAction("UserRequests");
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> AdminReject(int requestId)
+        {
+            var request = await _context.RentalRequests.FindAsync(requestId);
+            if (request == null)
+            {
+                return NotFound();
+            }
+
+            request.RentalStatus = 3; // Rejected
+            await _context.SaveChangesAsync();
+
+            TempData["ErrorMessage"] = "Request rejected.";
+            return RedirectToAction("UserRequests");
+        }
+
     }
 }

@@ -1,4 +1,7 @@
-﻿<!DOCTYPE html>
+﻿@{
+    var user = ViewBag.User as ClassLibrary.Models.User;
+}
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -23,13 +26,14 @@
                     <a class="text-gray-600 hover:text-orange-500" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                     <a class="text-gray-600 hover:text-orange-500" asp-area="" asp-controller="Equipment" asp-action="Index">Equipment</a>
                     <a class="text-gray-600 hover:text-orange-500" asp-controller="RentalRequest" asp-action="Index">My Requests</a>
-                    <a class="text-gray-600 hover:text-orange-500" asp-controller="UserManagement" asp-action="ManageUsers">User Management</a>
-                    <a class="text-gray-600 hover:text-orange-500" asp-controller="Logs" asp-action="Index">View Logs</a>
 
                 }
                 @if (ViewBag.User != null && ViewBag.User.RoleId !=3)
                 {
+                    <a href="@Url.Action("UserRequests", "RentalRequest")" class="text-gray-600 hover:text-orange-500">Manage Requests</a>
                     <a class="text-gray-600 hover:text-orange-500" asp-area="" asp-controller="Admin" asp-action="Dashboard">Admin Dashboard</a>
+                    <a class="text-gray-600 hover:text-orange-500" asp-controller="UserManagement" asp-action="ManageUsers">User Management</a>
+                    <a class="text-gray-600 hover:text-orange-500" asp-controller="Logs" asp-action="Index">View Logs</a>
                 }
             </div>
 
