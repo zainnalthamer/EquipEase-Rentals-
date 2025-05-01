@@ -1113,3 +1113,5 @@ C:\Users\Dell\Documents\AdvancedProject\HelloWorld\obj\Debug\net8.0\refint\Renta
 C:\Users\Dell\Documents\AdvancedProject\HelloWorld\obj\Debug\net8.0\Rental.pdb
 C:\Users\Dell\Documents\AdvancedProject\HelloWorld\obj\Debug\net8.0\Rental.genruntimeconfig.cache
 C:\Users\Dell\Documents\AdvancedProject\HelloWorld\obj\Debug\net8.0\ref\Rental.dll
+C:\Users\Dell\Documents\AdvancedProject\HelloWorld\bin\Debug\net8.0\SeedImages\camera.jfif
+C:\Users\Dell\Documents\AdvancedProject\HelloWorld\bin\Debug\net8.0\SeedImages\camera1.jpg

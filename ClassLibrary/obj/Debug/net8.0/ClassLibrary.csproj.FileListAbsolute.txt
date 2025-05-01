@@ -87,3 +87,5 @@ C:\Users\Dell\Documents\AdvancedProject\ClassLibrary\obj\Debug\net8.0\refint\Cla
 C:\Users\Dell\Documents\AdvancedProject\ClassLibrary\obj\Debug\net8.0\ClassLibrary.pdb
 C:\Users\Dell\Documents\AdvancedProject\ClassLibrary\obj\Debug\net8.0\ClassLibrary.genruntimeconfig.cache
 C:\Users\Dell\Documents\AdvancedProject\ClassLibrary\obj\Debug\net8.0\ref\ClassLibrary.dll
+C:\Users\Dell\Documents\AdvancedProject\ClassLibrary\bin\Debug\net8.0\SeedImages\camera.jfif
+C:\Users\Dell\Documents\AdvancedProject\ClassLibrary\bin\Debug\net8.0\SeedImages\camera1.jpg

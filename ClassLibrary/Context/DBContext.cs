@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using Microsoft.Graph.Models;
 using User = ClassLibrary.Models.User;
+using System.IO;
 
 
 namespace ClassLibrary.Persistence;
@@ -63,6 +64,27 @@ public partial class DBContext : DbContext
         => optionsBuilder.UseSqlServer("Server=(localdb)\\MSSQLLocalDB;Database=NewDB;Trusted_Connection=True;");
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        var imagePath = Path.Combine(AppContext.BaseDirectory, "SeedImages", "camera.jfif");
+        byte[] imageBytes = File.Exists(imagePath) ? File.ReadAllBytes(imagePath) : null;
+
+        if (imageBytes != null)
+        {
+            //modelBuilder.Entity<Equipment>().HasData(
+            //    new Equipment
+            //    {
+            //        Id = 100, 
+            //        Name = "Canon EOS R8",
+            //        Description = "High-quality mirrorless camera with RF 24–50mm lens.",
+            //        CategoryId = 2,         // Assuming "Cameras" category has ID 2
+            //        Price = 150,            // Price per day
+            //        AvailableId = 1,        // Available
+            //        ConditionId = 1,        // New
+            //        Image = imageBytes
+            //    }
+            //);
+        }
+
+
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.Entity<UserRole>().HasData(
@@ -217,6 +239,62 @@ public partial class DBContext : DbContext
 
         OnModelCreatingPartial(modelBuilder);
     }
+    public void SeedImageEquipment()
+    {
+        if (!Equipment.Any(e => e.Name == "Canon EOS R8"))
+        {
+            var imagePath1 = Path.Combine(AppContext.BaseDirectory, "SeedImages", "camera.jfif");
+            byte[] imageBytes1 = File.Exists(imagePath1) ? File.ReadAllBytes(imagePath1) : new byte[0];
+
+            Equipment.Add(new Equipment
+            {
+                Name = "Canon EOS R8",
+                Description = "High-quality mirrorless camera with RF 24–50mm lens.",
+                CategoryId = 2,
+                Price = 150,
+                AvailableId = 1,
+                ConditionId = 1,
+                Image = imageBytes1
+            });
+        }
+
+        if (!Equipment.Any(e => e.Name == "Leitz Elmar Vintage"))
+        {
+            var imagePath2 = Path.Combine(AppContext.BaseDirectory, "SeedImages", "camera1.jpg");
+            byte[] imageBytes2 = File.Exists(imagePath2) ? File.ReadAllBytes(imagePath2) : new byte[0];
+
+            Equipment.Add(new Equipment
+            {
+                Name = "Leitz Elmar Vintage",
+                Description = "Classic vintage camera with a 5cm f/3.5 lens.",
+                CategoryId = 2,
+                Price = 100,
+                AvailableId = 1,
+                ConditionId = 2,
+                Image = imageBytes2
+            });
+        }
+
+        if (!Equipment.Any(e => e.Name == "Mirrorless Z Alpha"))
+        {
+            var imagePath3 = Path.Combine(AppContext.BaseDirectory, "SeedImages", "camera2.avif");
+            byte[] imageBytes3 = File.Exists(imagePath3) ? File.ReadAllBytes(imagePath3) : new byte[0];
+
+            Equipment.Add(new Equipment
+            {
+                Name = "Mirrorless Z Alpha",
+                Description = "Advanced mirrorless camera with large sensor and fast autofocus.",
+                CategoryId = 2,
+                Price = 180,
+                AvailableId = 1,
+                ConditionId = 1,
+                Image = imageBytes3
+            });
+        }
+
+        SaveChanges();
+    }
+
 
     partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
