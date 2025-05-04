@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Rental.csproj": {}
+    "C:\\Users\\Gaming\\Downloads\\AdvancedProject\\HelloWorld\\Rental.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dell\\Documents\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj": {
+    "C:\\Users\\Gaming\\Downloads\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\Documents\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj",
+        "projectUniqueName": "C:\\Users\\Gaming\\Downloads\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj",
         "projectName": "ClassLibrary",
-        "projectPath": "C:\\Users\\Dell\\Documents\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\Documents\\AdvancedProject\\ClassLibrary\\obj\\",
+        "projectPath": "C:\\Users\\Gaming\\Downloads\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj",
+        "packagesPath": "C:\\Users\\Gaming\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gaming\\Downloads\\AdvancedProject\\ClassLibrary\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gaming\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -42,9 +42,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -91,24 +91,24 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.24575.35/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Rental.csproj": {
+    "C:\\Users\\Gaming\\Downloads\\AdvancedProject\\HelloWorld\\Rental.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Rental.csproj",
+        "projectUniqueName": "C:\\Users\\Gaming\\Downloads\\AdvancedProject\\HelloWorld\\Rental.csproj",
         "projectName": "Rental",
-        "projectPath": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\Rental.csproj",
-        "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dell\\Documents\\AdvancedProject\\HelloWorld\\obj\\",
+        "projectPath": "C:\\Users\\Gaming\\Downloads\\AdvancedProject\\HelloWorld\\Rental.csproj",
+        "packagesPath": "C:\\Users\\Gaming\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Gaming\\Downloads\\AdvancedProject\\HelloWorld\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Dell\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Gaming\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -123,8 +123,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\Dell\\Documents\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj": {
-                "projectPath": "C:\\Users\\Dell\\Documents\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj"
+              "C:\\Users\\Gaming\\Downloads\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj": {
+                "projectPath": "C:\\Users\\Gaming\\Downloads\\AdvancedProject\\ClassLibrary\\ClassLibrary.csproj"
               }
             }
           }
@@ -137,9 +137,9 @@
         "restoreAuditProperties": {
           "enableAudit": "true",
           "auditLevel": "low",
-          "auditMode": "all"
+          "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "9.0.100"
       },
       "frameworks": {
         "net8.0": {
@@ -189,7 +189,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200-preview.0.24575.35/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
