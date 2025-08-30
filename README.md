@@ -18,6 +18,7 @@ Main web interface for customers, staff, and administrators.
 
 #### Features
 **1. Authentication & Authorization**: Registration, login, role-based access (Customer, Manager, Admin).
+
 **2. Categories & Equipment Management**: Create, update, delete, and search inventory.
 **3. Rental Requests**: Customers submit requests; managers approve/reject.
 **4. Rental Transactions**: Track rentals, fees, deposits, and documents.
