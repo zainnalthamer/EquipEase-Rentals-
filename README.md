@@ -20,10 +20,15 @@ Main web interface for customers, staff, and administrators.
 **1. Authentication & Authorization**: Registration, login, role-based access (Customer, Manager, Admin).
 
 **2. Categories & Equipment Management**: Create, update, delete, and search inventory.
+
 **3. Rental Requests**: Customers submit requests; managers approve/reject.
+
 **4. Rental Transactions**: Track rentals, fees, deposits, and documents.
+
 **5. Returns**: Manage returned equipment, track conditions, and late fees.
+
 **6. Feedback & Notifications**: Customers leave feedback; system generates status updates.
+
 **7. Dashboards & Reports**: Admin/managers see KPIs (pending vs. completed, overdue, damaged items, financials).
 
 ### 2. FormApp - Windows Forms Application
@@ -31,13 +36,18 @@ Desktop application mainly for managers and administrators to speed up daily ope
 
 #### Features
 **1. Login**: Using the same credentials as the web app.
+
 **2. Quick View of Rental Requests**: Search, filter, update status.
+
 **3. Equipment Checkout / Transactions**: Approve rentals, manage ongoing ones.
+
 **4. Equipment Check-in / Returns**: Record returned equipment, update conditions.
+
 **5. Equipment Information**: Search, update status (available, rented, under maintenance).
+
 **6. Dashboards**: Real-time summaries of rentals, overdue items, inventory stats.
-**7. Logs & Audit Trails**: Exceptions and key actions logged for admin
-review.
+
+**7. Logs & Audit Trails**: Exceptions and key actions logged for admin review.
 
 ## Technologies Used
 ### Languages & Frameworks
